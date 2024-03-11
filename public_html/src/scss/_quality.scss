@@ -10,7 +10,8 @@
         flex-wrap: wrap;
         /* 5分割 */
         .w1{
-            width: calc(99%/5);
+            // width: calc(99%/5);
+            width: 19.4%;
         }
         .w2{
             width: calc(99%/5*2);
@@ -19,7 +20,8 @@
             width: calc(99%/5*3);
         }
         .w4{
-            width: calc(99%/5*4);
+            // width: calc(99%/5*4);
+            width: 79.6%;
         }
         /* 5分割ここまで */
         .whalf{
@@ -34,6 +36,10 @@
     // .alsb{
     //     align-items: ;
     // }
+
+    ._sp{
+        display: none;
+    }
 
     /* タブ含め内容 */
     .qualityCon{
@@ -85,12 +91,16 @@
                         background-color: #877437;
                         padding: 15px 20px;
                         margin: 20px auto 10px;
+                        &.p15{
+                            padding: 15px 10px;
+                            // height: 48px;
+                        }
                         p{
                             font-size: clamp(14px,2.5vw,20px);
                             text-align: center;
-                        }
-                        .fs18{
-                            font-size: 18.9px;
+                            &.fs15vw{
+                                font-size: (13px, 1.5vw, 20px);
+                            }
                         }
                         // &.w1{
                         //     width: calc(98%/5);
@@ -166,6 +176,28 @@
                 }
 
                 // width: calc(96%/5);
+            }
+        }
+    }
+
+    @media screen and (max-width: inc_set.$media_sp){
+        ._pc{
+            display: none;
+        }
+
+        ._sp{
+            display: block;
+        }
+
+        .qualityCon{
+            .tabArea{
+                .quaBxInner{
+                    .quaBx{
+                        .faciliCard{
+                            width: calc(96%/2);
+                        }
+                    }
+                }
             }
         }
     }

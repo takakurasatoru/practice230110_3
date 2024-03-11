@@ -80,7 +80,7 @@ include(dirname(__FILE__) . '/assets/inc/header.php');
                             <p class="notice">※浄水カートリッジは定期的な交換が必要です。</p>
                         </div>
                     </div>
-                    <div class="flex_area">
+                    <div class="flex_area _pc">
                         <div class="w4">
                             <div class="faciliLead">
                                 <p>KITCHEN</p>
@@ -368,8 +368,8 @@ include(dirname(__FILE__) . '/assets/inc/header.php');
                     </div>
                     <div class="flex_area">
                         <div class="w1">
-                            <div class="faciliLead">
-                                <p class="fs18">UNIVERSAL DESIGN</p>
+                            <div class="faciliLead p15">
+                                <p class="fs15vw">UNIVERSAL DESIGN</p>
                             </div>
                         </div>
                         <div class="w1">
