@@ -1,0 +1,602 @@
+@use "setting" as inc_set;
+
+header{
+  /* ヘッダー */
+  width: 100%;
+  height: 131px;
+
+  .hInner {
+    width: 90%;
+    height: 131px;
+    margin: 0 auto;
+    position: relative;
+
+    .top_header {
+      width: 100%;
+      height: 60px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+
+      .hLogoBx {
+        /* width: 20%; */
+        width: 300px;
+
+        .hLogo {
+          /* margin: 22px 0 0 3.4375%; */
+          margin-top: 22px;
+        }
+      }
+
+      .hLinkBx {
+        display: flex;
+        justify-content: space-between;
+
+        .hBLink {
+          padding-top: 15px;
+          width: 120px;
+          height: 45px;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          a {
+            display: block;
+            position: relative;
+
+            &:after {
+              position: absolute;
+              left: 0;
+              content: '';
+              width: 100%;
+              height: 1px;        
+              background: #000000;
+              bottom: -3px;
+              transform: scale(0, 1);
+              transform-origin: center top;
+              transition: 0.5s;
+            }
+
+            &:hover::after {
+              transform: scale(1, 1);
+            }          
+          }
+        }
+
+        .hBtn {
+          width: 210px;
+          text-align: center;
+          margin-top: 15px;
+          border: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+
+          a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            p {
+              color: #fff;
+            }
+          }
+        }
+
+        /* 「来場者様限定ページ」ボタン擬似要素 */
+        .visOnly::before{
+          content: "";
+          background: linear-gradient(90deg,#3E5674 0%,#718088 60%,#8096C5 100%);
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: .5s;
+          z-index: -1;
+        }
+
+        .visOnly:hover{
+          border: 1px solid #3E5674;
+
+          &::before{
+              opacity: 0;
+          }
+
+          a {
+            p {
+              color: #3E5674;
+            }
+          }
+        }
+
+        /* 「資料請求者様限定ページ」ボタン擬似要素 */
+        .docOnly::before{
+          content: "";
+          background: linear-gradient(90deg,#421314 0%,#6F4B26 14%,#968058 77%,#805429 95%);
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: .5s;
+          z-index: -1;
+        }
+
+        .docOnly:hover{
+          border: 1px solid #6F4B26;
+
+          &::before{
+            opacity: 0;
+          }
+
+          a {
+            p {
+              color: #6F4B26;
+            }
+          }
+        }
+
+        /* 「資料請求」ボタン擬似要素 */
+        .doc::before{
+          content: "";
+          background: linear-gradient(90deg,#9F0116 0%,#B9615A 50%,#671317 100%);
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: .5s;
+          z-index: -1;
+        }
+
+        .doc:hover{
+          border: 1px solid #9F0116;
+
+          &::before{
+            opacity: 0;
+          }
+
+          a {
+            p {
+              color: #9F0116;
+            }
+          }
+        }
+
+        /* 「来場予約」ボタン擬似要素 */
+        .vis::before{
+          content: "";
+          background: linear-gradient(90deg,#DFB66F 0%,#C98700 50%,#AC6913 100%);
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: .5s;
+          z-index: -1;
+        }
+
+        .vis:hover{
+          border: 1px solid #AC6913;
+
+          &::before{
+            opacity: 0;
+          }
+
+          a {
+            p {
+              color: #AC6913;
+            }
+          }
+        }
+      }
+    }
+
+    .hNav {
+      width: 75%;
+      height: 45px;
+      margin-top: 26px;
+      display: flex;
+      justify-content: right;
+      margin-left: 8.15%;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      .navLink {
+        width: 10%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-left: #040000 1px solid;
+        color: #040000;
+        transition: .5s;
+
+        &:hover {
+          color: #fff;
+          background-color: #040000;
+        }
+      }
+    }
+  }
+}
+
+.pc_none {
+  display: none;
+}
+// ______________________________________
+// 縮小表示 ______________________________________
+@media screen and (max-width: 1500px){
+  /* ヘッダー */
+  // header .hInner .hNav {
+  //   width: 1012px;
+  // }
+
+  header {
+    .hInner {
+      .hNav {
+        width: 1012px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1450px){
+  /* ヘッダー */
+  .sp1450 {
+    display: inline;
+  }
+}
+
+@media screen and (max-width: 1420px){
+  /* ヘッダー */
+  header {
+    .hInner {
+      .top_header {
+        .hLinkBx {
+          .hBtn {
+            width: 170px;
+          }
+        }
+      }
+    }
+  }
+
+  .sp1420 {
+    display: inline;
+  }
+
+  .w150 {
+    width: 100px !important;
+  }
+}
+
+@media screen and (max-width: 1240px){
+  /* ヘッダー */
+  header {
+    .hInner {
+      .top_header {
+        .hLogoBx {
+          width: 250px;
+
+          .hLogo {
+            margin-top: 25px;
+          }
+        }
+      }
+
+      .hNav {
+        width: 860px;
+
+        .navLink {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1130px){
+  /* ヘッダー */
+  header {
+    .hInner {
+      .top_header {
+        .sp_none {
+          .hLinkBx {
+            .hBLink {
+              font-size: 14px;
+            }
+
+            .hBtn {
+              font-size: 14px;
+              width: 120px;
+            }
+
+            .w150 {
+              width: 80px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 950px){
+  header {
+    .hInner {
+      .top_header {
+        .sp_none{
+          .hLinkBx {
+            .hBLink {
+              font-size: 12px;
+              width: 90px;
+            }
+  
+            .hBtn {
+              width: 95px;
+              font-size: 12px;
+            }
+  
+            .w150 {
+              width: 65px !important;
+            }
+          }
+        }
+      }
+
+      .hNav {
+        width: 780px;
+
+        .navLink {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 870px){
+  /* ヘッダー */
+
+  header {
+    .hInner {
+      .top_header {
+        .hLogoBx {
+          width: 220px;
+        }
+      }
+
+      .hNav {
+        .w60_sp870 {
+          width: 60px !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px){
+  /* ヘッダー */
+  header {
+    .hInner {
+      .top_header {
+        .hLogoBx {
+          width: 220px;
+        }
+
+        .sp_none {
+          .hLinkBx {
+            .hBLink {
+              width: 77px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ここから768px以下 */
+@media screen and (max-width: inc_set.$media_sp){
+  /* ヘッダー */
+  header {
+    height: 80px;
+
+    .hInner {
+      height: auto;
+
+      .top_header {
+        .hLogoBx {
+          width: 300px;
+        }
+      }
+
+      .sp_none {
+        display: none;
+      }
+    }
+  }
+
+  .hSticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    visibility: visible;
+    animation: slideDown 0.3s ease-in-out;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+    z-index: 10;
+  }
+
+  @keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+  }
+
+  .spHeader {
+    width: 100%;
+    height: 110px;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+
+    .spHBtns {
+      width: 100%;
+      height: 60px;
+      display: flex;
+
+      .spHBtn {
+        display: flex;
+        width: 20%;
+        justify-content: center;
+        align-items: center;
+  
+        .hamBx {
+          width: 60px;
+          height: 30px;
+          text-align: center;
+  
+          .hamburger {
+            width: 40px;
+            height: 30px;
+            position: relative;
+            margin: -5px auto 0;
+  
+            .hamLine {
+              position: absolute;
+              /* width: 50px; */
+              width: 100%;
+              height: 1px;
+              right: 0;
+              background-color: #fff;
+              -webkit-transition: all 0.5s;
+              transition: all 0.5s;
+            }
+          
+            .hamLine__1 {
+              top: 0;
+            }
+          
+            .hamLine__2 {
+              top: 10px;
+            }
+          
+            .hamLine__3 {
+              top: 20px;
+            }
+          
+            /* ハンバーガーがクリックされたら✖️印にする */
+            .hamLine__1.active {
+              -webkit-transform: rotate(-45deg);
+              transform: rotate(-30deg);
+              top: 5px;
+            }
+          
+            .hamLine__2.active {
+              opacity: 0;
+            }
+          
+            .hamLine__3.active {
+              -webkit-transform: rotate(45deg);
+              transform: rotate(30deg);
+              top: 5px;
+            }
+          }
+        }
+      }
+      
+      .bgB {
+        background: linear-gradient(90deg,#421314 0%,#6F4B26 14%,#968058 77%,#805429 95%);
+      }
+      
+      .bgR {
+        background: linear-gradient(90deg,#9F0116 0%,#B9615A 50%,#671317 100%);
+      }
+      
+      .bgY {
+        background: linear-gradient(90deg,#DFB66F 0%,#C98700 50%,#AC6913 100%);
+      }
+    }
+
+    .spVisBtn {
+      display: block;
+      width: 100%;
+      height: 30px;
+      padding-top: 20px;
+      color: #fff !important;
+      text-align: center;
+    }
+
+    .bgG {
+      background: linear-gradient(90deg,#3E5674 0%,#718088 60%,#8096C5 100%);
+    }
+  }
+
+  .pc_none {
+    display: block;
+  }
+
+  .spMenu {
+    background-color: #000;
+    width: 100%;
+    height: calc(100vh - 110px);
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: all 0.5s 0s ease;
+    z-index: 100;
+
+    .spNav {
+      width: 80%;
+      margin: 80px auto 0;
+
+      .sp_nLink {
+        display: block;
+        width: 100%;
+        font-size: 14px;
+        color: #fff !important;
+        margin: 20px 0;
+        transition: all 0.5s;
+
+        .nLinkEn {
+          display: inline-block;
+          font-size: 24px !important;
+          width: 50%;
+        }
+      }
+    
+      .sp_nLink:hover {
+        border-bottom: #fff 1px solid;
+      }
+    }
+  }
+
+  .spMenu.active {
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 450px){
+    /* ヘッダー */
+    .spHeader .spHBtns .spHBtn {
+      font-size: 12px !important;
+    }
+}

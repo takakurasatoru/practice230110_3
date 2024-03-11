@@ -1,0 +1,551 @@
+@use "inc/setting" as inc_set;
+@use "inc/reset" as inc_re;
+
+#modelroom{
+
+    /* 見出し */
+    .HL {
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+        background-image: url(../../assets/img/modelroom/slideBack.jpg);
+        background-size: cover;
+
+        .HLImg {
+            width: 100%;
+            height: 100%;
+            background-image: url(../../assets/img/modelroom/HLBack.jpg);
+            background-position: center;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            transition: 1s ease;
+    
+            .HLtxtCon {
+                width: 80%;
+                max-width: 400px;
+                z-index: 10;
+
+                .HLtxtBx {
+                    .HLtxt {
+                        display: block;
+                        width: 100%;
+                        transition: 1s ease;
+                    }
+                } 
+    
+                ._mBx {
+                    font-size: 48px;
+                    width: 100%;
+                    height: 48px;
+                    padding-bottom: 10px;
+                    text-align: center;
+                    position: relative;
+                    overflow: hidden;
+
+                    &:after {
+                        content: '';
+                        width: 100%;
+                        height: 2px;
+                        background-color: #888060;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        transition: 1s ease;
+                    }
+
+                    .txtm_hide {
+                        transform: translateY(60px);
+                    }
+                }
+
+                .borNone {
+                    &:after {
+                        transform: scale(0, 1);
+                        transform-origin: center top;
+                    }
+                }
+        
+                ._sBx {
+                    padding-top: 10px;
+                    text-align: center;
+                    overflow: hidden;
+
+                    .txts_hide {
+                        transform: translateY(-60px);
+                    }
+                }
+            }
+    
+            &:before {
+                position: absolute;
+                content: '';
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,0.5);
+            }
+    
+            &.expan {
+                transform: scale(2.0,2.0);
+                opacity: 0;
+            }
+        }
+    }
+    
+
+    /* スライド部分共通パーツ */
+    .sliSec {
+        padding: 60px 0;
+        background-image: url(../../assets/img/modelroom/slideBack.jpg);
+        background-size: cover;
+
+        .sliInner {
+            width: 90%;
+            margin: 0 auto;
+
+            .sliCatch {
+                color: #947D00;
+                text-align: center;
+                padding-bottom: 10px;
+                border-bottom: 2px solid #000;
+                width: clamp(1050px,80%,1150px);
+                font-size: 30px;
+                line-height: 1.5;
+                margin: 0 auto;
+
+                .sp1200 {
+                    display: none;
+                }
+
+                .sp400 {
+                    display: none;
+                }
+            }
+
+            .sliHL {
+                margin-top: 60px;
+                text-align: center;
+                font-size: 36px;
+            }
+
+            .sliTxt {
+                margin-top: 30px;
+                text-align: center;
+                line-height: 1.5;
+            }
+
+            .slideBx {
+                width: 80%;
+                margin: 30px auto;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                
+                .sliPrBx {
+                    position: relative;
+
+                    .sliImg {
+                        width: 100%;
+                        // height: 60vh;
+                        padding-top: 66%;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                        position: relative;
+                    }
+
+                    .sliImgTxt {
+                        display: block;
+                        padding: 5px 0 0 5px;
+                    }
+                }
+
+                .slick-prev, 
+                .slick-next {
+                    position: absolute;
+                    z-index: 3;
+                    top: 45%;
+                    cursor: pointer;/*マウスカーソルを指マークに*/
+                    outline: none;/*クリックをしたら出てくる枠線を消す*/
+                }
+
+                .slick-prev {/*戻る矢印の位置と形状*/
+                    left:2.5%;
+                    border-top: 20px solid transparent;
+                    border-right: 30px solid #fff;
+                    border-bottom: 20px solid transparent;
+                }
+    
+                .slick-next {/*次へ矢印の位置と形状*/
+                    right:2.5%;
+                    border-top: 20px solid transparent;
+                    border-left: 30px solid #fff;
+                    border-bottom: 20px solid transparent;
+                }
+            }
+
+            .sliBtnBx {
+                width: 80% !important;
+                margin: 30px auto;
+
+                .slick-track {
+                    transform: unset !important;
+                    width: 100%;
+
+                    .sliBtn {
+                        margin: 5px;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                        position: relative;
+                        cursor: pointer;
+                    
+                        .sliBtnImg {
+                            width: 100%;
+                            height: 100%;
+                            background-size: cover;
+                            background-position: center;
+                            z-index: -1;
+                    
+                            &:before {
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                width: 100%;
+                                height: 100%;
+                                content: '';
+                                background-color: rgba(0,0,0,0.5);
+                                transition: opacity .3s linear;
+                            }
+                        }
+                    }
+
+                    .sliBtn.slick-current{
+                        .sliBtnImg {
+                            &:before {
+                                opacity: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* 共通パーツここまで */
+
+    /* C-Atype */
+    .C-A {
+        .sliInner {
+            .slideBx_C-A {
+                .sliPrBx {
+
+                    .img1 {
+                        background-image: url(../../assets/img/modelroom/CLDDay.jpg);
+                    }
+            
+                    .img2 {
+                        background-image: url(../../assets/img/modelroom/CLDNight_2.jpg);
+                    }
+            
+                    .img3 {
+                        background-image: url(../../assets/img/modelroom/CLDNight.jpg);
+                    }
+            
+                    .img4 {
+                        background-image: url(../../assets/img/modelroom/CBalcony.jpg);
+                    }
+            
+                    .img5 {
+                        background-image: url(../../assets/img/modelroom/CBed.jpg);
+                    }
+            
+                    .img6 {
+                        background-image: url(../../assets/img/modelroom/CRoom.jpg);
+                    }
+            
+                    .img7 {
+                        background-image: url(../../assets/img/modelroom/CRoom_2.jpg);
+                    }
+            
+                    .img8 {
+                        background-image: url(../../assets/img/modelroom/CKitchen.jpg);
+                    }
+            
+                    .img9 {
+                        background-image: url(../../assets/img/modelroom/CBath.jpg);
+                    }
+            
+                    .img10 {
+                        background-image: url(../../assets/img/modelroom/CWash.jpg);
+                    }
+                }
+            }
+    
+            .sliBtnBx_C-A {
+                // height: 40vh;
+                height: 20vw;
+    
+                .slick-track {
+    
+                    .sliBtn {
+                        width: calc(100% / 5 - 10px) !important;
+                        height: calc(10vw - 10px);
+                    }
+
+                    .sliBtn:nth-child(1) {
+                        .sliBtnImg {
+                            background-image: url(../../assets/img/modelroom/CLDDay.jpg);
+                        }
+                    }
+
+                    .sliBtn:nth-child(2) {
+                        .sliBtnImg {
+                            background-image: url(../../assets/img/modelroom/CLDNight_2.jpg);
+                        }
+                    }
+            
+                    .sliBtn:nth-child(3) {
+                        .sliBtnImg {
+                            background-image: url(../../assets/img/modelroom/CLDNight.jpg);
+                        }
+                    }
+            
+                    .sliBtn:nth-child(4) {
+                        .sliBtnImg {
+                            background-image: url(../../assets/img/modelroom/CBalcony.jpg);
+                        }
+                    }
+            
+                    .sliBtn:nth-child(5) {
+                        .sliBtnImg {
+                            background-image: url(../../assets/img/modelroom/CBed.jpg);
+                        }
+                    }
+            
+                    .sliBtn:nth-child(6) {
+                        .sliBtnImg {
+                            background-image: url(../../assets/img/modelroom/CRoom.jpg);
+                        }
+                    }
+            
+                    .sliBtn:nth-child(7) {
+                        .sliBtnImg {
+                            background-image: url(../../assets/img/modelroom/CRoom_2.jpg);
+                        }
+                    }
+            
+                    .sliBtn:nth-child(8) {
+                        .sliBtnImg {
+                            background-image: url(../../assets/img/modelroom/CKitchen.jpg);
+                        }
+                    }
+            
+                    .sliBtn:nth-child(9) {
+                        .sliBtnImg {
+                            background-image: url(../../assets/img/modelroom/CBath.jpg);
+                        }
+                    }
+            
+                    .sliBtn:nth-child(10) {
+                        .sliBtnImg {
+                            background-image: url(../../assets/img/modelroom/CWash.jpg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* B-Gtype */
+    .B-G {
+        padding: 30px 0 60px;
+        margin-bottom: 60px;
+
+        .sliInner {
+    
+            .slideBx_B-G {
+    
+                .sliPrBx {
+    
+                    .img1 {
+                        background-image: url(../../assets/img/modelroom/BLDNight.jpg);
+                    }
+            
+                    .img2 {
+                        background-image: url(../../assets/img/modelroom/BLDNight_2.jpg);
+                    }
+            
+                    .img3 {
+                        background-image: url(../../assets/img/modelroom/BRoom.jpg);
+                    }
+            
+                    .img4 {
+                        background-image: url(../../assets/img/modelroom/BBalcony.jpg);
+                    }
+                }
+            }
+    
+            .sliBtnBx_B-G {
+                height: 10vw;
+    
+                .slick-track {
+    
+                    .sliBtn {
+                        width: calc(100% / 4 - 10px) !important;
+                        height: 10vw;
+                    }
+                }
+    
+                .sliBtn:nth-child(1) {
+                    .sliBtnImg {
+                        background-image: url(../../assets/img/modelroom/BLDNight.jpg);
+                    }
+                }
+        
+                .sliBtn:nth-child(2) {
+                    .sliBtnImg {
+                        background-image: url(../../assets/img/modelroom/BLDNight_2.jpg);
+                    }
+                }
+        
+                .sliBtn:nth-child(3) {
+                    .sliBtnImg {
+                        background-image: url(../../assets/img/modelroom/BRoom.jpg);
+                    }
+                }
+        
+                .sliBtn:nth-child(4) {
+                    .sliBtnImg {
+                        background-image: url(../../assets/img/modelroom/BBalcony.jpg);
+                    }
+                }
+            }
+
+            .sliNotice {
+                font-size: 10px;
+                margin: 30px auto 0;
+                width: 80%;
+
+                .sp768 {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    // ______________________________________
+    @media screen and (max-width: 1200px){
+        /* スライド部分共通パーツ */
+        .sliSec {
+            .sliInner {
+                .sliCatch {
+                    width: 80%;
+                    min-width: 700px;
+
+                    .sp1200 {
+                        display: inline;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: inc_set.$media_sp){
+        /* スライド部分共通パーツ */
+        .sliSec {
+            .sliInner {
+                .sliCatch {
+                    min-width: auto;
+                    font-size: clamp(16px, inc_set.$vw_28px, 30px);
+                }
+
+                .sliHL {
+                    margin-top: 30px;
+                }
+
+                .sliTxt {
+                    width: 90%;
+                    text-align: left;
+                    margin: 30px auto 0;
+
+                    .pc768 {
+                        display: none;
+                    }
+                }
+
+                .slideBx {
+                    width: 100%;
+                }
+
+                .sliBtnBx {
+                    width: 100% !important;
+
+                    .slick-track {
+                        .sliBtn {
+                            height: calc(15vw - 10px);
+                        }
+                    }
+                }
+
+                .sliBtnBx_B-G {
+                    height: 15vw;
+                }
+
+                .sliNotice {
+                    width: 100%;
+
+                    .sp768 {
+                        display: inline;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 500px){
+        /* 見出し */
+        .HL {
+            .HLImg {
+                .HLtxtCon {
+                    max-width: 300px;
+                }
+            }
+        }
+
+        /* スライド部分共通パーツ */
+        .sliSec {
+            .sliInner {
+                .slideBx {
+                    .slick-prev {/*戻る矢印の位置と形状*/
+                        border-top: 10px solid transparent;
+                        border-right: 15px solid #fff;
+                        border-bottom: 10px solid transparent;
+                    }
+        
+                    .slick-next {/*次へ矢印の位置と形状*/
+                        border-top: 10px solid transparent;
+                        border-left: 15px solid #fff;
+                        border-bottom: 10px solid transparent;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 400px){
+        /* スライド部分共通パーツ */
+        .sliSec {
+            .sliInner {
+                .sliCatch {
+                    .sp400 {
+                        display: inline;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,360 @@
+@use "setting" as inc_set;
+
+footer{
+    /* フッター */
+  .fInner {
+    width: 90%;
+    max-width: 1213px;
+    margin: 0 auto;
+
+    .fBtnBx {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 0 40px;
+
+      .fBtn {
+        width: 45%;
+        height: 45px;
+        border: none;
+        font-size: 20px;
+        letter-spacing: 0.25em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        a {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          p {
+            color: #fff;
+          }
+        }
+      }
+
+      /* 「資料請求はこちら」ボタン擬似要素 */
+      .doc_fBtn::before{
+        content: "";
+        background: linear-gradient(90deg,#9F0116 0%,#B9615A 50%,#671317 100%) !important;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: .5s;
+        z-index: -1;
+      }
+
+      .doc_fBtn:hover{
+        &::before{
+            opacity: 0;
+        }
+
+        a {
+          p {
+            color: #9F0116;
+          }
+        }
+      }
+
+      /* 「来場予約はこちら」ボタン擬似要素 */
+      .vis_fBtn::before{
+        content: "";
+        background: linear-gradient(90deg,#DFB66F 0%,#C98700 50%,#AC6913 100%);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: .5s;
+        z-index: -1;
+      }
+
+      .vis_fBtn:hover{
+        &::before{
+            opacity: 0;
+        }
+
+        a {
+          p {
+            color: #AC6913;
+          }
+        }
+      }
+    }
+  }
+
+  .fnavBx {
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(0deg,#99846b,#b7a897);
+
+    .fInner {
+      width: 90%;
+      max-width: 1213px;
+      height: 100%;
+      margin: 0 auto;
+
+      .fNav {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+
+        .fNavLink {
+          height: 80%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-left: #000 1px solid;
+          font-size: clamp(10px, inc_set.$vw_10px, 16px);          flex: auto;
+          position: relative;
+
+          a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            p {
+              color: #000;
+              position: relative;
+
+              &:after {
+                position: absolute;
+                left: 0;
+                content: '';
+                width: 100%;
+                height: 1px;        
+                background: #000000;
+                bottom: -3px;
+                transform: scale(0, 1);
+                transform-origin: center top;
+                transition: .3s;
+              }       
+            }
+
+            &:hover {
+              p:after {
+                transform: scale(1, 1);
+              }
+            }  
+          }
+        }
+      }
+    }
+  }
+
+  .fTxt {
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .fTel {
+    display: block;
+    width: 500px;
+    margin: 20px auto 0;
+  }
+
+  .fLogoBx {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+
+    .fLogoCont {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .fLogoTxt {
+        width: auto;
+        line-height: 24px;
+        margin-right: 10px;
+      }
+
+      .fLogo {
+        display: block;
+        width: 60%;
+      }
+    }
+  }
+
+  .copyRight {
+    margin-top: 40px;
+    height: 40px;
+    background-color: #8E8060;
+    color: #fff;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sp_hSpace {
+    display: none;
+  }
+
+
+  /* レスポンシブ時改行 */
+  .sp768 {
+    display: none;
+  }
+
+  .sp560 {
+    display: none;
+  }
+
+  .sp450 {
+    display: none;
+  }
+
+  // ______________________________________
+
+  /* ここから768px以下 */
+  @media screen and (max-width: inc_set.$media_sp){
+    /* フッター */
+    .fInner {
+      width: 80%;
+
+      .fCatch {
+        font-size: 44px;
+        line-height: 66px;
+
+        .sp768 {
+          display: inline;
+        }
+
+        .fs30 {
+          font-size: 20px !important;
+        }
+      }
+
+      .fBtnBx {
+        display: block;
+        width: 323px;
+        margin: 0 auto;
+
+        .fBtn {
+          width: 100%;
+          margin: 20px auto;
+        }
+      }
+    }
+
+    .fnavBx {
+      .fInner {
+        width: 80%;
+      }
+    }
+
+    .sp_none {
+      display: none;
+    }
+
+    .sp_hSpace {
+      height: 110px;
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 720px){
+    /* フッター */
+    .fInner {
+      .fLogoBx {
+        display: block;
+        margin: 0 auto;
+        padding-top: 0;
+
+        .fLogoCont {
+          margin: 30px auto;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 560px){
+    /* フッター */
+    .fTxt {
+      line-height: 24px;
+
+      .sp560 {
+        display: inline;
+      }
+    }
+
+    .fTel {
+      width: 400px;
+    }
+  }
+
+  @media screen and (max-width: 500px){
+    /* フッター */
+    .copyRight {
+      font-size: 10px;
+    }
+  }
+
+  @media screen and (max-width: 450px){
+    /* フッター */
+    .fInner {
+      width: 90%;
+
+      .fCatch {
+        font-size: 34px;
+        line-height: 51px;
+      }
+
+      .fBtnBx {
+        width: 100%;
+
+        .fBtn {
+          width: 100%;
+        }
+      }
+    }
+
+    .fTxt {
+      .sp450 {
+        display: inline;
+      }
+    }
+
+    .fTel {
+      width: 310px;
+    }
+
+    .fInner {
+      .fLogoBx {
+        .fLogoCont {
+          .fLogoTxt {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    .copyRight {
+      line-height: 1.5;
+      text-align: center;
+
+      p {
+        .sp450 {
+          display: inline;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,172 @@
+@use "inc/setting" as inc_set;
+@use "inc/reset" as inc_re;
+
+#quality{
+
+    .flex_area{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        /* 5分割 */
+        .w1{
+            width: calc(99%/5);
+        }
+        .w2{
+            width: calc(99%/5*2);
+        }
+        .w3{
+            width: calc(99%/5*3);
+        }
+        .w4{
+            width: calc(99%/5*4);
+        }
+        /* 5分割ここまで */
+        .whalf{
+            width: calc(96%/2);
+        }
+    }
+
+    .alstart{
+        align-items: flex-start;
+    }
+
+    // .alsb{
+    //     align-items: ;
+    // }
+
+    /* タブ含め内容 */
+    .qualityCon{
+        padding: 80px 0;
+        .tabArea{
+            width: 95%;
+            max-width: 1100px;
+            margin: 0 auto;
+            .tab{
+                width: calc(100% / 4.5);
+                background-color: #fff;
+                border: 1px solid #877437;
+                padding: 10px 0;
+                cursor: pointer;
+                p{
+                    text-align: center;
+                    color: #877437;
+                }
+                &.active{
+                    background-color: #877437;
+                    p{
+                        color: #fff;
+                    }
+                }
+            }
+            .quaBxInner{
+                width: 100%;
+                margin: 80px auto;
+                .quaBx{
+                    opacity: 0;
+                    &.show{
+                        opacity: 1;
+                    }
+                    .quaBxLead{
+                        width: 100%;
+                        color: #fff;
+                        background-color: #656464;
+                        padding: 15px 20px;
+                        margin: 20px auto;
+                        p{
+                            span{
+                                font-size: clamp(14px,3.5vw,20px);
+                            }
+                        }
+                    }
+                    .faciliLead{
+                        width: 100%;
+                        color: #fff;
+                        background-color: #877437;
+                        padding: 15px 20px;
+                        margin: 20px auto 10px;
+                        p{
+                            font-size: clamp(14px,2.5vw,20px);
+                            text-align: center;
+                        }
+                        .fs18{
+                            font-size: 18.9px;
+                        }
+                        // &.w1{
+                        //     width: calc(98%/5);
+                        // }
+                        // &.w2{
+                        //     width: calc(98%/5*2);
+                        // }
+                        // &.w3{
+                        //     width: calc(98%/5*3);
+                        // }
+                        // &.w4{
+                        //     width: calc(98%/5*4);
+                        // }
+                    }
+                    .faciliCard{
+                        width: calc(96%/5);
+                        .fcLead{
+                            font-size: clamp(14px, 1.5vw, 18px);
+                            color: #877437;
+                            margin: 10px 0;
+                            .fs10{
+                                font-size: 10px;
+                            }
+                        }
+                        .fcTxt{
+                            font-size: 14px;
+                            line-height: 1.25;
+                            .fs10{
+                                font-size: 10px;
+                            }
+                        }
+                        .notice{
+                            font-size: 10px;
+                            margin: 10px 0;
+                            line-height: 1.5;
+                        }
+                        .rNotice{
+                            font-size: 10px;
+                            text-align: right;
+                        }
+                        // &.w52{
+                        //     width: calc(96%/5*2);
+                        // }
+                        &.w2{
+                            width: calc(96%/2);
+                        }
+                        &.w32{
+                            width: calc(96%/3*2);
+                        }
+                        &.w31{
+                            width: calc(96%/3*1);
+                        }
+                        &.floorFlex{
+                            display: flex;
+                            justify-content: space-between;
+                            flex-direction: column;
+                            height: 100%;
+                        }
+                        &.lineBx{
+                            border: 1px solid #877437;
+                            padding: 10px;
+                        }
+                        .ucomBx{
+                            width: 80%;
+                            margin: 10px auto;
+                        }
+                    }
+                    .notice{
+                        margin: 10px 0;
+                        font-size: 10px;
+                        line-height: 1.5;
+                    }
+                }
+
+                // width: calc(96%/5);
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+/*-----------------font---------------------*/
+@font-face {
+	font-family: 'a1';
+	src: url(../fonts/a1.otf) format('opentype');
+}
+@font-face {
+	font-family: 'gara';
+	src: url(../fonts/gara.otf) format('opentype');
+}
+
+
+body{
+	font-family: 'gara','a1', serif;
+}
+.a1{
+	font-family: 'a1', serif;
+}
+.gara{
+	// font-family: 'a1', serif;
+	font-family: 'gara', serif;
+}

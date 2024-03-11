@@ -1,0 +1,184 @@
+@use "inc/setting" as inc_set;
+@use "inc/reset" as inc_re;
+@use "inc/font";
+@use "inc/anime";
+@use "inc/header";
+@use "inc/footer";
+@use "top";
+@use "modelroom";
+@use "location";
+@use "interview";
+@use "quality";
+
+*{
+  box-sizing: border-box;
+}
+
+/* TOP・フッターの大きい赤文字 */
+.fCatch {
+  // font-size: 54px;
+  font-size: clamp(10px, inc_set.$vw_40px, 54px);
+  color: #aa272d;
+  text-align: center;
+  line-height: 75.6px;
+}
+
+.fCacth_s {
+  font-size: clamp(10px, inc_set.$vw_20px, 20px);
+}
+
+// important要素 ______________________________________
+
+  /* 横幅 */
+  .w150 {
+    width: 150px !important;
+  }
+
+  // .w370 {
+  //   width: 370px !important;
+  // }
+
+  /* padding */
+  .pt25 {
+    padding-top: 25px !important;
+  }
+
+  .pt20 {
+    padding-top: 20px !important;
+  }
+
+  .pb24 {
+    padding-bottom: 24px !important;
+  }
+
+  .pb32 {
+    padding-bottom: 32px !important;
+  }
+
+  .pr6 {
+    padding-right: 6.4% !important;
+  }
+
+  /* マージン */
+  .mt16 {
+    margin-top: 16px !important;
+  }
+
+  /* 背景色 */
+  .bgG {
+    background: linear-gradient(90deg,#3E5674 0%,#718088 60%,#8096C5 100%) !important;
+  }
+
+  .bgB {
+    background: linear-gradient(90deg,#421314 0%,#6F4B26 14%,#968058 77%,#805429 95%) !important;
+  }
+
+  .bgR {
+    background: linear-gradient(90deg,#9F0116 0%,#B9615A 50%,#671317 100%) !important;
+  }
+
+  .bgY {
+    background: linear-gradient(90deg,#DFB66F 0%,#C98700 50%,#AC6913 100%) !important;
+  }
+
+  .bgBe {
+    background: linear-gradient(90deg,#C6BEA1,#E1DCCD) !important;
+  }
+
+  .bgBl {
+    background-color: #000 !important;
+  }
+
+  /* 文字色 */
+  .coBe {
+    color: #877437 !important;
+  }
+
+  .cofff {
+    color: #fff !important;
+  }
+
+  .co8e8060 {
+    color: #8E8060 !important;
+  }
+
+  /* 枠線 */
+  .borderR {
+    border-right: #040000 1px solid !important;
+  }
+
+  .borR {
+    border: #9F0116 1px solid !important;
+  }
+
+  .borY {
+    border: #AC6913 1px solid !important;
+  }
+
+  .brNone {
+    border-right: none !important;
+    border-bottom: none !important;
+  }
+
+  /* フォントサイズ */
+  .fs10 {
+    font-size: 10px !important;
+  }
+
+  .fs16 {
+    font-size: 16px !important;
+  }
+
+  .fs28 {
+    font-size: 28px !important;
+  }
+
+  .fs30 {
+    font-size: 30px !important;
+  }
+
+  .fs32 {
+    font-size: 32px !important;
+  }
+
+  .fs42 {
+    font-size: 42px !important;
+  }
+
+  .fs56 {
+    font-size: 56px !important;
+  }
+
+  .fs64 {
+    font-size: 64px !important;
+  }
+
+  /* 不透明度 */
+  .opa05 {
+    opacity: 0.5 !important;
+  }
+
+  /* 文字間 */
+  // .ls01 {
+  //   letter-spacing: 0.1px !important;
+  // }
+
+  // .ls-20 {
+  //   letter-spacing: -20px !important;
+  // }
+
+  /* 行間 */
+  // .lh24 {
+  //   line-height: 24px !important;
+  // }
+
+// ______________________________________
+// ______________________________________
+// ______________________________________
+// ______________________________________
+@media screen and (max-width: inc_set.$media_sp){
+
+/*@media screen end*/}
+// ______________________________________
+// ______________________________________
+// ______________________________________

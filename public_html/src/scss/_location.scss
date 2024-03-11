@@ -1,0 +1,1021 @@
+@use "inc/setting" as inc_set;
+@use "inc/reset" as inc_re;
+
+#location{
+    main{
+        background-image: url(../../assets/img/location/backImage.jpg);
+        // background-size: cover;
+        background-size: 100%;
+
+        /* 見出し */
+        .HL {
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+
+            .HLImg {
+                width: 100%;
+                height: 100%;
+                background-image: url(../../assets/img/location/HLBack.jpg);
+                background-position: center;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                transition: 1s ease;
+        
+                .HLtxtCon {
+                    width: 80%;
+                    max-width: 400px;
+                    z-index: 10;
+
+                    .HLtxtBx {
+                        .HLtxt {
+                            display: block;
+                            width: 100%;
+                            transition: 1s ease;
+                        }
+                    } 
+        
+                    ._mBx {
+                        font-size: 48px;
+                        width: 100%;
+                        height: 48px;
+                        padding-bottom: 10px;
+                        text-align: center;
+                        position: relative;
+                        overflow: hidden;
+
+                        &:after {
+                            content: '';
+                            width: 100%;
+                            height: 2px;
+                            background-color: #888060;
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                            transition: 1s ease;
+                        }
+
+                        .txtm_hide {
+                            transform: translateY(60px);
+                        }
+                    }
+
+                    .borNone {
+                        &:after {
+                            transform: scale(0, 1);
+                            transform-origin: center top;
+                        }
+                    }
+            
+                    ._sBx {
+                        padding-top: 10px;
+                        text-align: center;
+                        overflow: hidden;
+
+                        .txts_hide {
+                            transform: translateY(-60px);
+                        }
+                    }
+                }
+        
+                &:before {
+                    position: absolute;
+                    content: '';
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0,0,0,0.2);
+                }
+        
+                &.expan {
+                    transform: scale(2.0,2.0);
+                    opacity: 0;
+                }
+
+                .HLNotice {
+                    font-size: 10px;
+                    position: absolute;
+                    right: 10px;
+                    bottom: 10px;
+                }
+            }
+        }
+
+        /* photo */
+        .photo {
+            padding: 120px 0 60px;
+
+            .pMainHL {
+                width: 700px;
+                margin: 0 auto;
+
+                .pMHLTxt {
+                    font-size: 30px;
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid #000;
+                    text-align: center;
+
+                    .sp420 {
+                        display: none;
+                    }
+                }
+
+                .pMHLTxt_s {
+                    padding-top: 20px;
+                    text-align: center;
+                }
+            }
+
+            .pHLBx {
+                position: relative;
+                width: 90%;
+                padding: 15px 0 15px 50px;
+                margin-top: 60px;
+                transition: 1s;
+
+                &.hidden {
+                    transform: translateX(-100%);
+                }
+
+                .pHLBg {
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    content: '';
+                    left: -20px;
+                    top: 0%;
+                    transform: skewX(30deg);
+                }
+
+                .pHLBg.shopping {
+                    background-color: #808060;
+                }
+
+                .pHLBg.park {
+                    background-color: #008080;
+                }
+
+                .pHLBg.education {
+                    background-color: #62b7d4;
+                }
+
+                .pHLBg.others {
+                    background-color: #adb421;
+                }
+
+                .pHL {
+                    color: #fff;
+                    position: relative;
+                    font-size: clamp(10px, inc_set.$vw_9px, 17px);
+                    z-index: 1;
+                    transition-duration: 1s;
+                    transition-delay: 1s;
+
+                    &.transparent {
+                        opacity: 0;
+                    }
+
+                    .pHL_L {
+                        font-size: clamp(16px, inc_set.$vw_16px, 41.5px);
+                        padding-right: 10px;
+                    }
+
+                    .sp768 {
+                        display: none;
+                    }
+                }
+            }
+
+            .pInner {
+                width: 87%;
+                margin: 0 auto;
+
+                .pGrid{
+                    display: grid;
+                    grid-gap: 10px;
+                    width: 100%;
+                    height: 50vw;
+                    margin-top: 30px;
+
+                    .pImgBx {
+                        overflow: hidden;
+                        width: 100%;
+                        height: 100%;
+
+                        .pImg {
+                            position: relative;
+                            background-size: cover;
+                            background-position: center;
+                            width: 100%;
+                            height: 100%;
+                            transition-duration: 1s;
+    
+                            &:before {
+                                position: absolute;
+                                content: '';
+                                left: 0;
+                                bottom: 0;
+                                width: 100%;
+                                height: 25px;
+                                background-color: rgba(0,0,0,0.2);
+                            }
+
+                            &.expan {
+                                transform: scale(2.0);
+                                opacity: 0;
+                            }
+    
+                            .pImgNotice {
+                                color: #fff;
+                                font-size: 14px;
+                                font-size: clamp(10px, inc_set.$vw_6px, 14px);
+                                position: absolute;
+                                right: 5px;
+                                bottom: 5px;
+                                text-align: right;
+    
+                                .sp1150 {
+                                    display: none;
+                                }
+    
+                                .sp850 {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .pGrid.shopping {
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-template-rows: repeat(3, 1fr);
+
+                    .pImgBx:nth-child(1) {
+                        grid-area: 1 / 1 / 3 / 3;
+
+                        .pImg{
+                            background-image: url(../../assets/img/location/AEONRakunan.jpg);
+                        }
+                    }
+
+                    .pImgBx:nth-child(2) {
+                        grid-area: 1 / 3 / 2 / 5;
+
+                        .pImg{
+                            background-image: url(../../assets/img/location/gourmetcityNishioji.jpg);
+                            transition-delay: 0.1s;
+                        }
+                    }
+
+                    .pImgBx:nth-child(3) {
+                        grid-area: 2 / 3 / 3 / 4;
+
+                        .pImg{
+                            background-image: url(../../assets/img/location/shopingImage1.jpg);
+                            transition-delay: 0.2s;
+                        }
+                    }
+
+                    .pImgBx:nth-child(4) {
+                        grid-area: 2 / 4 / 3 / 5;
+
+                        .pImg{
+                            background-image: url(../../assets/img/location/FRESCOKujo.jpg);
+                            transition-delay: 0.3s;
+                        }
+                    }
+
+                    .pImgBx:nth-child(5) {
+                        grid-area: 3 / 1 / 4 / 2;
+
+                        .pImg{
+                            background-image: url(../../assets/img/location/sevenJRNishioji.jpg);
+                            transition-delay: 0.4s;
+                        }
+                    }
+
+                    .pImgBx:nth-child(6) {
+                        grid-area: 3 / 2 / 4 / 4;
+
+                        .pImg{
+                            background-image: url(../../assets/img/location/shoppingImage2.jpg);
+                            transition-delay: 0.5s;
+                        }
+                    }
+
+                    .pImgBx:nth-child(7) {
+                        grid-area: 3 / 4 / 4 / 5;
+
+                        .pImg{
+                            background-image: url(../../assets/img/location/AEONmallKyoto.jpg);
+                            transition-delay: 0.6s;
+                        }
+                    }
+                }
+
+                .pGrid.park {
+                    grid-template-columns: 1fr 0.75fr repeat(2, 1fr);
+                    grid-template-rows: repeat(3, 1fr);
+
+                    .pImgBx:nth-child(1) {
+                        grid-area: 1 / 1 / 3 / 3;
+
+                        .pImg {
+                            background-image: url(../../assets/img/location/YouYouPark.jpg);
+                        }
+                    }
+
+                    .pImgBx:nth-child(2) {
+                        grid-area: 1 / 3 / 2 / 5;
+
+                        .pImg {
+                            background-image: url(../../assets/img/location/karahashisaijiPark.jpg);
+                            transition-delay: 0.1s;
+                        }
+                    }
+
+                    .pImgBx:nth-child(3) {
+                        grid-area: 2 / 3 / 3 / 4;
+
+                        .pImg {
+                            background-image: url(../../assets/img/location/katsuragawaGreenPark.jpg);
+                            transition-delay: 0.2s;
+                        }
+                    }
+
+                    .pImgBx:nth-child(4) {
+                        grid-area: 2 / 4 / 3 / 5;
+
+                        .pImg {
+                            background-image: url(../../assets/img/location/parkImage1.jpg);
+                            transition-delay: 0.3s;
+                        }
+                    }
+
+                    .pImgBx:nth-child(5) {
+                        grid-area: 3 / 1 / 4 / 2;
+
+                        .pImg {
+                            background-image: url(../../assets/img/location/parkImage2.jpg);
+                            transition-delay: 0.4s;
+                        }
+                    }
+
+                    .pImgBx:nth-child(6) {
+                        grid-area: 3 / 2 / 4 / 5;
+
+                        .pImg {
+                            background-image: url(../../assets/img/location/umekojiPark.jpg);
+                            transition-delay: 0.5s;
+                        }
+                    }
+                }
+
+                .pGrid.education {
+                    grid-template-columns: 2fr 0.2fr 1fr 0.1fr 1fr 0.1fr;
+                    grid-template-rows: repeat(3, 1fr);
+
+                    .pImgBx:nth-child(1) {
+                        grid-area: 1 / 1 / 3 / 3;
+
+                        .pImg {
+                            background-image: url(../../assets/img/location/rakunanSchool.jpg);
+                        }
+                    }
+
+                    .pImgBx:nth-child(2) {
+                        grid-area: 1 / 3 / 2 / 7;
+
+                        .pImg {
+                            background-image: url(../../assets/img/location/shohoSchool.jpg);
+                            transition-delay: 0.1s;
+                        }
+                    }
+
+                    .pImgBx:nth-child(3) {
+                        grid-area: 2 / 3 / 3 / 5;
+
+                        .pImg {
+                            background-image: url(../../assets/img/location/eduImage1.jpg);
+                            transition-delay: 0.2s;
+                        }
+                    }
+
+                    .pImgBx:nth-child(4) {
+                        grid-area: 2 / 5 / 3 / 7;
+
+                        .pImg {
+                            background-image: url(../../assets/img/location/kishoinChild.jpg);
+                            transition-delay: 0.3s;
+                        }
+                    }
+
+                    .pImgBx:nth-child(5) {
+                        grid-area: 3 / 1 / 4 / 2;
+
+                        .pImg {
+                            background-image: url(../../assets/img/location/eduImage2.jpg);
+                            transition-delay: 0.4s;
+                        }
+                    }
+
+                    .pImgBx:nth-child(6) {
+                        grid-area: 3 / 2 / 4 / 4;
+
+                        .pImg {
+                            background-image: url(../../assets/img/location/kurumiSchool.jpg);
+                            transition-delay: 0.5s;
+                        }
+                    }
+
+                    .pImgBx:nth-child(7) {
+                        grid-area: 3 / 4 / 4 / 7;
+
+                        .pImg {
+                            background-image: url(../../assets/img/location/aragusaSchool.jpg);
+                            transition-delay: 0.6s;
+                        }
+                    }
+                }
+
+                .pGrid.others {
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-template-rows: repeat(3, 1fr);
+
+                    .pImgBx:nth-child(1) {
+                        grid-area: 1 / 1 / 3 / 2;
+
+                        .pImg {
+                            background-image: url(../../assets/img/location/kisyoinTenman.jpg);
+                        }
+                    }
+
+                    .pImgBx:nth-child(2) {
+                        grid-area: 1 / 2 / 2 / 4;
+
+                        .pImg {
+                            background-image: url(../../assets/img/location/omoriHospital.jpg);
+                            transition-delay: 0.1s;
+                        }
+                    }
+
+                    .pImgBx:nth-child(3) {
+                        grid-area: 1 / 4 / 3 / 5;
+
+                        .pImg {
+                            background-image: url(../../assets/img/location/kujoHospital.jpg);
+                            transition-delay: 0.2s;
+                        }
+                    }
+
+                    .pImgBx:nth-child(4) {
+                        grid-area: 2 / 2 / 3 / 3;
+
+                        .pImg {
+                            background-image: url(../../assets/img/location/kisyoinPost.jpg);
+                            transition-delay: 0.3s;
+                        }
+                    }
+
+                    .pImgBx:nth-child(5) {
+                        grid-area: 2 / 3 / 3 / 4;
+
+                        .pImg {
+                            background-image: url(../../assets/img/location/takaoDentist.jpg);
+                            transition-delay: 0.4s;
+                        }
+                    }
+
+                    .pImgBx:nth-child(6) {
+                        grid-area: 3 / 1 / 4 / 3;
+
+                        .pImg {
+                            background-image: url(../../assets/img/location/imaiHospital.jpg);
+                            transition-delay: 0.5s;
+                        }
+                    }
+
+                    .pImgBx:nth-child(7) {
+                        grid-area: 3 / 3 / 4 / 5;
+
+                        .pImg {
+                            background-image: url(../../assets/img/location/takedaHospital.jpg);
+                            transition-delay: 0.6s;
+                        }
+                    }
+                }
+            }
+        }
+
+        /* life Information */
+        .lifeInfo {
+            background-color: #fff;
+            padding: 30px 0;
+
+            .lIInner {
+                width: 87%;
+                margin: 0 auto;
+
+                .lIMHL {
+                    width: 700px;
+                    margin: 0 auto;
+    
+                    .lIMHLTxt {
+                        font-size: 45px;
+                        padding-bottom: 10px;
+                        border-bottom: 1px solid #000;
+                        text-align: center;
+                    }
+    
+                    .lIMHLTxt_s {
+                        padding-top: 13px;
+                        text-align: center;
+                    }
+                }
+
+                .mapImg {
+                    display: block;
+                    width: 80%;
+                    // margin-top: 60px;
+                    margin: 60px auto 0;
+                }
+
+                .mapNotice {
+                    font-size: 10px;
+                    text-align: right;
+                    margin-top: 20px;
+
+                    .sp768 {
+                        display: none;
+                    }
+                }
+
+                .lIHLBx {
+                    width: 85%;
+                    height: 30px;
+                    margin: 30px auto 10px;
+                    background-color: #837e28;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .lIHL {
+                        color: #fff;
+                        letter-spacing: 0.2em;
+                    }
+                }
+
+                .tabBtnGrid {
+                    display: grid;
+                    width: 85%;
+                    margin: 0 auto;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-template-rows: repeat(2, 1fr);
+                    gap: 10px;
+
+                    .tBtn {
+                        color: #fff;
+                        background-color: #808080;
+                        height: 80px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        transition: 0.5s;
+                        cursor: pointer;
+
+                        .tBtn_ltxt {
+                            // font-size: 25px;
+                            font-size: clamp(18px, inc_set.$vw_20px, 25px);
+                            line-height: 1.5;
+                        }
+
+                        .tBtn_stxt {
+                            // font-size: 19px;
+                            font-size: clamp(10px, inc_set.$vw_10px, 19px);
+                        }
+
+                        &.active {
+                            background-color: #807439;
+                        }
+
+                        &:hover {
+                            background-color: #807439;
+                            opacity: 0.9;
+                        }
+                    }
+                }
+
+                .tab {
+                    border: 1px solid #666;
+                    width: calc(85% - 42px);
+                    // height: 100px;
+                    margin: 0 auto;
+                    padding: 10px 20px;
+
+                    .tabCon {
+                        display: none;
+                        // opacity: 0;
+                        transition: 1s;
+
+                        .tabFlex {
+                            display: flex;
+                            justify-content: space-between;
+                            margin: 10px 0;
+                            position: relative;
+    
+                            &:before {
+                                content: '';
+                                width: 100%;
+                                height: 5px;
+                                position: absolute;
+                                left: 0;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                background-size: 8px 2px;
+                                background-image: linear-gradient(to right,#000 4px,transparent 4px);
+                                background-position: left top;
+                                background-repeat: repeat-x;
+                            }
+
+                            p {
+                                z-index: 2;
+                                background: #fff;
+                                padding: 0 5px;
+                                font-size: clamp(10px, inc_set.$vw_20px, 16px);
+
+                                .sp420 {
+                                    display: none;
+                                }
+                            }
+                        }
+
+                        &.show {
+                            display: block;
+                            // opacity: 1;
+                        }
+                    }
+                }
+
+                .lINotice {
+                    font-size: 10px;
+                    margin-top: 40px;
+                }
+            }
+        }
+
+        // ______________________________________
+        @media screen and (max-width: 1150px){
+            .photo {
+                .pInner {
+                    .pGrid {
+                        .pImg {
+                            .pImgNotice {
+                                line-height: 1.2;
+
+                                .sp1150 {
+                                    display: inline;
+                                }
+                            }
+                        }
+                    }
+
+                    .pGrid.shopping {
+                        .pImg:nth-child(4),
+                        .pImg:nth-child(5),
+                        .pImg:nth-child(7) {
+                            &:before {
+                                height: 35px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 850px){
+            .photo {
+                .pHLBx {
+                    padding-left: 10px;
+                }
+                .pInner {
+                    .pGrid {
+                        .pImg {
+                            .pImgNotice {
+                                .sp850 {
+                                    display: inline;
+                                }
+                            }
+                        }
+                    }
+
+                    .pGrid.education {
+                        .pImg:nth-child(4) {
+                            &:before {
+                                height: 35px;
+                            }
+                        }
+                    }
+
+                    .pGrid.others {
+                        .pImg:nth-child(1),
+                        .pImg:nth-child(3),
+                        .pImg:nth-child(4) {
+                            &:before {
+                                height: 35px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        /* レスポンシブ */
+        @media screen and (max-width: inc_set.$media_sp){
+            /* photo */
+            .photo {
+                padding: 60px 0;
+
+                .pMainHL {
+                    width: 90%;
+                    color: #fff;
+    
+                    .pMHLTxt {
+                        font-size: clamp(18px,inc_set.$vw_30px,30px);
+                        border-bottom: 1px solid #fff;
+                    }
+    
+                    .pMHLTxt_s {
+                        font-size: clamp(10px,inc_set.$vw_20px,16px);
+                    }
+                }
+
+                .pHLBx {
+                    width: 70%;
+                    margin: 60px auto 0;
+                    padding: 60px 20px 15px 20px;
+
+                    &.hidden {
+                        transform: translateX(-150%);
+                    }
+
+                    .pHLBg {
+                        left: 0;
+                        transform: skewX(0deg);
+                    }
+
+                    .pHL {
+                        text-align: center;
+                        font-size: clamp(10px, inc_set.$vw_20px, 28px);
+                        line-height: 1.2;
+
+                        .pHL_L {
+                            display: block;
+                            padding-bottom: 30px;
+                            padding-right: 0;
+                            font-size: clamp(16px, inc_set.$vw_58px, 48px);
+                        }
+
+                        .sp768 {
+                            display: inline;
+                        }
+                    }
+                }
+
+                .pInner {
+                    .pGrid {
+                        height: 140vw;
+
+                        &.shopping {
+                            grid-template-columns: 1fr repeat(2, 0.1fr) 1fr;
+                            grid-template-rows: repeat(5, 1fr);
+    
+                            .pImgBx:nth-child(1) {
+                                grid-area: 1 / 1 / 2 / 5;
+                            }
+        
+                            .pImgBx:nth-child(2) {
+                                grid-area: 2 / 1 / 3 / 5;
+                            }
+        
+                            .pImgBx:nth-child(3) {
+                                grid-area: 3 / 1 / 4 / 2;
+                            }
+        
+                            .pImgBx:nth-child(4) {
+                                grid-area: 3 / 2 / 4 / 5;
+                            }
+        
+                            .pImgBx:nth-child(5) {
+                                grid-area: 4 / 1 / 5 / 4;
+                            }
+        
+                            .pImgBx:nth-child(6) {
+                                grid-area: 4 / 4 / 5 / 5;
+                            }
+        
+                            .pImgBx:nth-child(7) {
+                                grid-area: 5 / 1 / 6 / 5;
+                            }
+                        }
+
+                        &.park {
+                            grid-template-columns: 0.9fr 0.1fr 1fr;
+                            grid-template-rows: repeat(4, 1fr);
+    
+                            .pImgBx:nth-child(1) {
+                                grid-area: 1 / 1 / 2 / 4;
+                            }
+        
+                            .pImgBx:nth-child(2) {
+                                grid-area: 2 / 1 / 3 / 4;
+                            }
+        
+                            .pImgBx:nth-child(3) {
+                                grid-area: 3 / 1 / 4 / 3;
+                            }
+        
+                            .pImgBx:nth-child(4) {
+                                grid-area: 3 / 3 / 4 / 4;
+                            }
+        
+                            .pImgBx:nth-child(5) {
+                                grid-area: 4 / 1 / 5 / 2;
+                            }
+        
+                            .pImgBx:nth-child(6) {
+                                grid-area: 4 / 2 / 5 / 4;
+                            }
+                        }
+
+                        &.education {
+                            grid-template-columns: repeat(2, 1fr);
+                            grid-template-rows: repeat(5, 1fr);
+    
+                            .pImgBx:nth-child(1) {
+                                grid-area: 1 / 1 / 2 / 3;
+                            }
+        
+                            .pImgBx:nth-child(2) {
+                                grid-area: 2 / 1 / 3 / 3;
+                            }
+        
+                            .pImgBx:nth-child(3) {
+                                grid-area: 3 / 1 / 4 / 2;
+                            }
+        
+                            .pImgBx:nth-child(4) {
+                                grid-area: 3 / 2 / 4 / 3;
+                            }
+        
+                            .pImgBx:nth-child(5) {
+                                grid-area: 4 / 1 / 5 / 3;
+                            }
+        
+                            .pImgBx:nth-child(6) {
+                                grid-area: 5 / 1 / 6 / 2;
+                            }
+
+                            .pImgBx:nth-child(7) {
+                                grid-area: 5 / 2 / 6 / 3;
+                            }
+                        }
+
+                        &.others {
+                            grid-template-columns: repeat(2, 1fr);
+                            grid-template-rows: 1.5fr repeat(2, 1fr) 1.5fr repeat(2, 1.25fr);
+    
+                            .pImgBx:nth-child(1) {
+                                grid-area: 1 / 1 / 2 / 3;
+                            }
+        
+                            .pImgBx:nth-child(2) {
+                                grid-area: 2 / 1 / 3 / 3;
+                            }
+        
+                            .pImgBx:nth-child(3) {
+                                grid-area: 3 / 1 / 4 / 2;
+                            }
+        
+                            .pImgBx:nth-child(4) {
+                                grid-area: 3 / 2 / 4 / 3;
+                            }
+        
+                            .pImgBx:nth-child(5) {
+                                grid-area: 4 / 1 / 5 / 3;
+                            }
+        
+                            .pImgBx:nth-child(6) {
+                                grid-area: 5 / 1 / 6 / 3;
+                            }
+
+                            .pImgBx:nth-child(7) {
+                                grid-area: 6 / 1 / 7 / 3;
+                            }
+                        }
+                    }
+                }
+            }
+
+            /* life Information */
+            .lifeInfo {
+                padding: 120px 0;
+
+                .lIInner {
+                    width: 100%;
+
+                    .lIMHL {
+                        width: 90%;
+                    }
+
+                    .mapImg {
+                        width: 100%;
+                    }
+
+                    .mapNotice {
+                        margin-top: 90px;
+
+                        .sp768 {
+                            display: inline;
+                        }
+                    }
+
+                    .lIHLBx,.tabBtnGrid{
+                        width: 100%;
+                    }
+
+                    .tab {
+                        width: calc(100% - 22px);
+                        padding: 10px;
+                    }
+
+                    .lINotice {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 500px){
+            /* 見出し */
+            .HL {
+                .HLImg {
+                    .HLtxtCon {
+                        max-width: 300px;
+                    }
+                }
+            }
+
+            /* photo */
+            .photo {
+                padding-top: 60px;
+            }
+        }
+
+        @media screen and (max-width: 420px){
+            .photo {
+                .pMainHL {
+                    .pMHLTxt {
+                        line-height: 1.5;
+
+                        .sp420 {
+                            display: inline;
+                        }
+                    }
+                }
+            }
+
+            .lifeInfo {
+                .lIInner {
+                    .tab {
+                        .tabCon {
+                            .tabFlex {
+                                p {
+                                    .sp420 {
+                                        display: inline;
+                                    }
+                                }
+                                
+                                .pt5_sp420 {
+                                    padding-top: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* レスポンシブで背景画像変更 */
+    @media screen and (max-width: inc_set.$media_sp){
+        main {
+            background-image: url(../../assets/img/location/backImage_sp.jpg);
+        }
+    }
+}

@@ -1,0 +1,2845 @@
+@use "inc/setting" as inc_set;
+@use "inc/reset" as inc_re;
+
+#top{
+  /* 共通パーツ */
+  .comHLBx {
+    .conceHL {
+      font-size: 36px;
+      padding-left: 40px;
+      border-bottom: solid 1px #000;
+    }
+    
+    .conceMHL {
+      font-size: 12px;
+      padding-left: 40px;
+      padding-top: 10px;
+    }
+  }
+
+  .detailLink {
+    background-color: #8e8060;
+    display: block;
+    width: 250px;
+    height: 58px;
+    margin: 20px auto 0;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+
+    a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      p {
+        color: #fff;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 180px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 1.5px;
+      background-color: #fff;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 215px;
+      top: 26px;
+      width: 4px;
+      height: 4px;
+      border-top: 1.5px solid #fff;
+      border-right: 1.5px solid #fff;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+    &:hover {
+      background-color: #fff;
+      border: 1px solid #8e8060;
+
+      &::before {
+        background-color: #8e8060;
+      }
+    
+      &::after {
+        border-top: 1.5px solid #8e8060;
+        border-right: 1.5px solid #8e8060;
+      }
+
+      a {
+        p {
+          color: #8e8060;
+        }
+      }
+    }
+  }
+
+  .fCatch {
+    font-size: clamp(10px, inc_set.$vw_40px, 54px);
+    color: #aa272d;
+    text-align: center;
+    line-height: 75.6px;
+  }
+
+  .fCacth_s {
+    font-size: clamp(10px, inc_set.$vw_20px, 20px);
+  }
+
+  // ______________________________________
+
+  body {
+    position: relative;
+  }
+
+  // important要素 ______________________________________
+
+  /* 横幅 */
+  // .w150 {
+  //   width: 150px !important;
+  // }
+
+  /* padding */
+  // .pt25 {
+  //   padding-top: 25px !important;
+  // }
+
+  // .pt20 {
+  //   padding-top: 20px !important;
+  // }
+
+  // .pb24 {
+  //   padding-bottom: 24px !important;
+  // }
+
+  // .pb32 {
+  //   padding-bottom: 32px !important;
+  // }
+
+  // .pr6 {
+  //   padding-right: 6.4% !important;
+  // }
+
+  /* マージン */
+  // .mt16 {
+  //   margin-top: 16px !important;
+  // }
+
+  /* 背景色 */
+  // .bgG {
+  //   background: linear-gradient(90deg,#3E5674 0%,#718088 60%,#8096C5 100%) !important;
+  // }
+
+  // .bgB {
+  //   background: linear-gradient(90deg,#421314 0%,#6F4B26 14%,#968058 77%,#805429 95%) !important;
+  // }
+
+  // .bgR {
+  //   background: linear-gradient(90deg,#9F0116 0%,#B9615A 50%,#671317 100%) !important;
+  // }
+
+  // .bgY {
+  //   background: linear-gradient(90deg,#DFB66F 0%,#C98700 50%,#AC6913 100%) !important;
+  // }
+
+  // .bgBe {
+  //   background: linear-gradient(90deg,#C6BEA1,#E1DCCD) !important;
+  // }
+
+  // .bgBl {
+  //   background-color: #000 !important;
+  // }
+
+  /* 文字色 */
+  // .coBe {
+  //   color: #877437 !important;
+  // }
+
+  // .cofff {
+  //   color: #fff !important;
+  // }
+
+  // .co8e8060 {
+  //   color: #8E8060 !important;
+  // }
+
+  /* 枠線 */
+  // .borderR {
+  //   border-right: #040000 1px solid !important;
+  // }
+
+  // .borR {
+  //   border: #9F0116 1px solid !important;
+  // }
+
+  // .borY {
+  //   border: #AC6913 1px solid !important;
+  // }
+
+  // .brNone {
+  //   border-right: none !important;
+  //   border-bottom: none !important;
+  // }
+
+  /* フォントサイズ */
+  // .fs10 {
+  //   font-size: 10px !important;
+  // }
+
+  // .fs16 {
+  //   font-size: 16px !important;
+  // }
+
+  // .fs28 {
+  //   font-size: 28px !important;
+  // }
+
+  // .fs30 {
+  //   font-size: 30px !important;
+  // }
+
+  // .fs32 {
+  //   font-size: 32px !important;
+  // }
+
+  // .fs42 {
+  //   font-size: 42px !important;
+  // }
+
+  // .fs56 {
+  //   font-size: 56px !important;
+  // }
+
+  // .fs64 {
+  //   font-size: 64px !important;
+  // }
+
+  /* 不透明度 */
+  // .opa05 {
+  //   opacity: 0.5 !important;
+  // }
+
+  /* 文字間 */
+  // .ls01 {
+  //   letter-spacing: 0.1px !important;
+  // }
+
+  .ls-20 {
+    letter-spacing: -20px !important;
+  }
+
+  /* 行間 */
+  // .lh24 {
+  //   line-height: 24px !important;
+  // }
+
+  // ______________________________________
+
+  /* フォントサイズや文字間等 */
+  main{
+    overflow: hidden;
+    p{
+      line-height: 1.5em;
+      letter-spacing: .15em;
+    }
+    .ttl{
+      font-size: 32px;
+      font-size: clamp(10px, inc_set.$vw_52px, 32px);
+    }
+    .lead{
+      font-size: 24px;
+      font-size: clamp(10px, inc_set.$vw_42px, 24px);
+    }
+    .text{
+      font-size: 16px;
+      font-size: clamp(10px, inc_set.$vw_24px, 16px);
+    }
+    .txt{
+      font-size: 14px;
+      font-size: clamp(10px, inc_set.$vw_20px, 14px);
+    }
+
+    .fs28v{
+      font-size: 28px;
+      font-size: clamp(10px, inc_set.$vw_44px, 28px);
+    }
+
+    .fs42v {
+      font-size: 42px;
+      font-size: clamp(10px, inc_set.$vw_58px, 42px);
+    }
+
+    .fs56v {
+      font-size: 56px;
+      font-size: clamp(10px, inc_set.$vw_58px, 56px);
+    }
+
+    .mTxt1_l {
+      font-size: clamp(10px, inc_set.$vw_62px, 64px);
+    }
+  }
+
+  /* ファーストビュー */
+  .fv {
+    width: 100%;
+    height: 700px;
+    background-image: url(../img/common/fvBack.png);
+    background-size: cover;
+    background-position: 50% 50%;
+
+    .fvInn {
+      width: 90%;
+      max-width: 1200px;
+      height: 100%;
+      margin: 0 auto;
+      position: relative;
+
+      .fvCatImg,.fvExtImg,.fvPriImg,.fvTxt {
+        transform: translateY(25%);
+        opacity: 0;
+        transition: 2s ease;
+        &.show{
+          opacity: 1;
+        }
+      }
+      
+      @keyframes MVAnime {
+        to {
+          transform: translateY(0px);
+          opacity: 1;
+        }
+      }
+
+      .fvCatImg {
+        width: 300px;
+        position: absolute;
+        left: 5%;
+        top: 30px;
+        transition-delay: 1s;
+        &.show{
+          transform: translate(0, 0);
+        }
+      }
+
+      .fvExtImg {
+        width: 950px;
+        position: absolute;
+        left: 20%;
+        bottom: 50px;
+        &.show{
+          transform: translate(0, 0);
+        }
+      }
+      
+      .fvPriImg {
+        width: 150px;
+        position: absolute;
+        left: 6%;
+        top: 450px;
+        transition-delay: 2s;
+        &.show{
+          transform: translate(0, 0);
+        }
+      }
+      
+      .fvTxt {
+        position: absolute;
+        right: 5%;
+        bottom: 20px;
+        &.show{
+          transform: translate(0, 0);
+        }
+      }
+    }
+  }
+
+  /* アクセス */
+  .access {
+    width: 100%;
+    padding: 40px 0;
+    background: linear-gradient(90deg,#6F3100 0%,#4B2613 25%,#5F1E00 56%,#5F2100 70%,#4F2A16 78%,#4B2613 100%);
+
+    .acFlex {
+      display: flex;
+      justify-content: center;
+      width: 90%;
+      margin: 0 auto;
+      flex-wrap: wrap;
+
+      .acCont {
+        color: #fff;
+        border-right: #fff 1px solid;
+        margin: 10px 0;
+        padding: 0 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &.brNone {
+          border-right: none;
+          border-bottom: none;
+        }
+
+        div {
+
+          .ac_tTxt1,.ac_tTxt2,.ac_tTxt3 {
+            height: 16px;
+            font-size: 10px;
+          }
+          
+          .ac_mTxt1,.ac_mTxt2,.ac_mTxt3 {
+            font-size: clamp(10px, inc_set.$vw_44px, 28px);
+          }
+          
+          .ac_bTxt1,.ac_bTxt3 {
+            text-align: right;
+            height: 16px;
+          }
+
+          .ac_bTxt3 {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+
+    .acSubTxt {
+      color: #fff;
+      text-align: center;
+      margin-top: 25px;
+      font-size: 24px;
+    }
+  }
+
+  /* コストパフォーマンス */
+  .cospa {
+    width: 100%;
+    padding: 40px 0 20px;
+    background-color: rgba(135,116,55,0.3);
+
+    .cosTxt {
+      width: 750px;
+      margin: 0 auto;
+      padding-bottom: 20px;
+      position: relative;
+
+      .ls-20 {
+        letter-spacing: -20px;
+      }
+
+      .co8e8060 {
+        color: #8E8060;
+      }
+      
+      .astarisk {
+        font-size: 10px;
+        position: absolute;
+        right: 150px;
+        top: 0;
+      }
+    }
+
+    .cosFlex_pri {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      column-gap: 40px;
+      row-gap: 40px;
+      width: 80%;
+      max-width: 1200px;
+      margin: 20px auto;
+
+      p {
+
+        &.pt25 {
+          padding-top: 25px;
+        }
+
+        .coGrad {
+          background: linear-gradient(90deg,#806736 0%,#755126 10%,#806533 23%,#9a8052 50%,#c4a480 70%,#9a8052 90%,#d0bf9e 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-size: 56px;
+        }
+
+        .fs10 {
+          font-size: 10px;
+        }
+      }
+
+      .cosFSenBx {
+        margin-top: 50px;
+        height: 35px;
+      }
+
+      p {
+        .txtBx {
+          display: block;
+          width: 203px;
+          margin-bottom: 20px;
+          border: solid 1px #000;  
+        }
+      }
+    }
+
+    .cosFlex_spec {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 90%;
+      // max-width: 1300px;
+      margin: 0 auto;
+    
+      .specCon {
+        background: linear-gradient(90deg,#421134 0%,#6f4b26 15%,#9a804f 50%,#8c8058 77%,#805429 95%);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+        padding: 10px 5px;
+        font-size: 22px;
+        // width: 25%;
+        width: 280px;
+
+        p {
+          .fs16 {
+            font-size: 16px;
+          }
+
+          .fs32 {
+            font-size: 32px;
+          }
+
+          .fs42 {
+            font-size: 42px;
+          }
+
+          .sp340 {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  /* 予約受付中 */
+  .reserve {
+    margin: 30px 0 40px;
+
+    .resInner {
+      // width: 1175px;
+      width: 90%;
+      max-width: 1500px;
+      margin: 0 auto;
+      padding-bottom: 40px;
+      border-bottom: double 5px #000;
+
+      .resHL {
+        // width: 1175px;
+        width: 100%;
+        margin: 0 auto 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .resHL_bor {
+          background-color: #000;
+          // width: 428px;
+          width: 35%;
+          height: 1px;
+          // margin-top: 12px;
+        }
+
+        .resHL_txt {
+          // width: 41%;
+          width: 345px;
+          font-size: clamp(12px, inc_set.$vw_20px, 22px);
+          padding: 0 20px;
+          text-align: center;
+        }
+      }
+
+      .resBtnBx {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row-reverse;
+        width: 90%;
+        margin: 20px auto 0;
+
+        .resBtn {
+          width: 40%;
+          max-width: 490px;
+          min-width: 250px;
+          height: 45px;
+          text-align: center;
+          border: none;
+          font-size: 20px;
+          letter-spacing: 0.25em;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+
+          &.borR {
+            border: #9F0116 1px solid;
+          }
+
+          &.borY {
+            border: #AC6913 1px solid;
+          }
+
+          a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            p {
+              color: #fff;
+            }
+          }
+        }
+
+        /* 「来場予約はこちら」ボタン擬似要素 */
+        .vis_resBtn::before{
+          content: "";
+          background: linear-gradient(90deg,#DFB66F 0%,#C98700 50%,#AC6913 100%);
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: .5s;
+          z-index: -1;
+        }
+
+        .vis_resBtn:hover{
+          &::before{
+              opacity: 0;
+          }
+
+          a {
+            p {
+              color: #AC6913;
+            }
+          }
+        }
+
+        /* 「資料請求はこちら」ボタン擬似要素 */
+        .doc_resBtn::before{
+          content: "";
+          background: linear-gradient(90deg,#9F0116 0%,#B9615A 50%,#671317 100%);
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: .5s;
+          z-index: -1;
+        }
+
+        .doc_resBtn:hover{
+          &::before{
+              opacity: 0;
+          }
+
+          a {
+            p {
+              color: #9F0116;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* INFORMATION等ここから */
+  .informations {
+    padding: 40px 0 50px;
+    background-image: url(../img/common/infoBack.jpg);
+    background-size: cover;
+
+    .infoInn {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+
+      /* INFORMATION */
+      .information {
+        border-top: #000 1px solid;
+        border-bottom: #000 1px solid;
+        padding: 30px 0;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        .infoHL {
+          font-size: 22px;
+          padding-right: 5%;
+        }
+
+        div{
+          .infoFlex {
+            display: flex;
+
+            .infoDate {
+              padding-right: 5%;
+
+              &.pr6 {
+                padding-right: 6.4%;
+              }
+            }
+
+            .pb32 {
+              padding-bottom: 32px;
+            }
+          }
+        }
+      }
+
+      /* limited */
+      .limited {
+        margin: 80px auto 120px;
+        padding: 30px 20px;
+        background-color: #fff;
+        border: 1px solid;
+        border-image: linear-gradient(to right,#421314 0%,#6f4b26 8%,#9a804f 38%,#d3c5a3 56%,#8c8058 80%,#805429 95%);
+        border-image-slice: 1;
+
+        .limHL {
+          font-size: 48px;
+          text-align: center;
+        }
+        
+        .limFlex {
+          border-top: 1px solid;
+          border-bottom: 1px solid;
+          border-image: linear-gradient(to right,#806736 0%,#755126 11%,#806533 23%,#9a8052 50%,#c4a480 69%,#9a8052 90%,#d0bf9e 100%);
+          border-image-slice: 1;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: row-reverse;
+
+          .limCon {
+            width: 50%;
+            padding: 30px 30px 50px 30px;
+            text-align: center;
+            margin: 10px 0;
+
+            .limConHL {
+              font-size: clamp(20px, inc_set.$vw_20px, 32px);
+              margin-bottom: 20px;
+            }
+            
+            .limConTxt {
+              margin-bottom: 20px;
+            }
+
+            .limImgFlex {
+              // .limImgBx {
+              //   width: 80%;
+              //   margin: 20px auto;
+              //   overflow: hidden;
+
+                .limImg {
+                  width: 80%;
+                  // width: 100%;
+                  height: 0;
+                  padding-top: 42.4%;
+                  margin: 20px auto;
+                  background-size: contain;
+                  background-repeat: no-repeat;
+                  position: relative;
+                  // transition: 3s ease;
+                }
+
+                .limDoc {
+                  background-image: url(../../assets/img/common/delivery.jpg);
+                }
+
+                .limInfo {
+                  background-image: url(../../assets/img/common/limInfo.jpg);
+                }
+
+                .limPan {
+                  background-image: url(../../assets/img/common/pamphlet.jpg);
+                }
+
+                .limRoom {
+                  background-image: url(../../assets/img/common/modelroom.jpg);
+                  background-size: cover;
+                  background-position: 40% 40%;
+                }
+
+                .imgTxt_pan {
+                  position: absolute;
+                  font-size: 10px;
+                  right: 10px;
+                  bottom: 5px;
+                }
+
+                .imgTxt_din {
+                  position: absolute;
+                  font-size: 10px;
+                  right: 5px;
+                  bottom: 5px;
+                  color: #fff;
+                }
+              // }
+            }
+
+            .limConR {
+              font-size: clamp(10px, inc_set.$vw_20px, 32px);
+              margin-bottom: 40px;
+              color: #aa272d;
+            }
+
+            .passBx {
+              width: 100%;
+              height: 60px;
+              border: 1px solid #000;
+              display: flex;
+
+              .passInp {
+                display: block;
+                width: 65%;
+                height: 40px;
+                padding: 10px 20px;
+                border: none;
+              }
+              
+              .logBtn {
+                width: 35%;
+                text-align: center;
+                border: none;
+                font-size: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                transition: .5s;
+
+                &.bgG {
+                  background: linear-gradient(90deg,#3E5674 0%,#718088 60%,#8096C5 100%);
+                } 
+
+                a {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+
+                  .lBtnTxt {
+                    font-size: clamp(10px, inc_set.$vw_15px, 20px);
+                    color: #fff;
+                  }
+                }
+
+                &.bgBl {
+                  background-color: #000;
+                }
+              }
+
+              .logBtn:hover {
+                opacity: 0.5;
+              }
+            }
+          }
+          
+          .borRig {
+            border-right: 1px solid;
+            border-image: linear-gradient(to bottom,#806736 0%,755126 11%,#806533 23%,#9a8052 50%,#c4a480 69%,#9a8052 90%,#d0bf9e 100%);
+          }
+        }
+
+        div {
+
+          .noPassHL {
+            font-size: 24px;
+            margin-top: 40px;
+            text-align: center;
+          }
+
+          .noPassFlex {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+
+            .noPFlCon {
+              width: 45%;
+
+              .noPassTxt {
+                text-align: center;
+              }
+              
+              .noPassBtn {
+                width: 100%;
+                height: 45px;
+                text-align: center;
+                border: none;
+                font-size: 20px;
+                letter-spacing: 0.25em;
+                margin-top: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+
+                &.borR {
+                  border: #9F0116 1px solid;
+                }
+
+                &.borY {
+                  border: #AC6913 1px solid;
+                }
+
+                a {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+
+                  p {
+                    color: #fff;
+                  }
+                }
+              }
+
+              /* 「資料請求はこちら」ボタン擬似要素 */
+              .doc_noPBtn::before {
+                content: "";
+                background: linear-gradient(90deg,#9F0116 0%,#B9615A 50%,#671317 100%);
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transition: .5s;
+                z-index: -1;
+              }
+
+              .doc_noPBtn:hover{
+                &::before{
+                    opacity: 0;
+                }
+        
+                a {
+                  p {
+                    color: #9F0116;
+                  }
+                }
+              }
+
+              /* 「来場予約はこちら」ボタン擬似要素 */
+              .vis_noPBtn::before {
+                content: "";
+                background: linear-gradient(90deg,#DFB66F 0%,#C98700 50%,#AC6913 100%);
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transition: .5s;
+                z-index: -1;
+              }
+
+              .vis_noPBtn:hover{
+                &::before{
+                    opacity: 0;
+                }
+        
+                a {
+                  p {
+                    color: #AC6913;
+                  }
+                }
+              }
+
+              .pc_none {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+
+      /* バナー */
+      .banners {
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+
+        .banImg {
+          width: 700px;
+          margin: 0 auto 30px;
+        }
+      }
+    }
+  }
+
+  /* リンク一覧 */
+  .links {
+    background-image: url("../../assets/img/common/linksBack.jpg");
+    background-size: cover;
+    background-position: right top;
+
+    /* コンセプト */
+    .concept {
+      display: flex;
+      width: 90%;
+      margin: 0 auto;
+      padding-top: 80px;
+
+      .concept_lBx {
+        width: 65%;
+        
+        .verticalTxtBx {
+          display: flex;
+          justify-content: center;
+          flex-direction: row-reverse;
+          margin-top: 20px;
+
+          .verticalTxt {
+            writing-mode: vertical-rl;
+            font-size: 20px;
+            letter-spacing: 0.2em;
+            padding-left: 20px;
+            display: block;
+            position: relative;
+
+            &::before {
+              content: "";
+              display: block;
+              width: 1px;
+              margin-left: 20px;
+              background-color: #000;
+            }
+
+            .tchAll {
+              text-combine-upright: all;
+              margin-bottom: 0.2em;
+            }
+          }
+          
+          .vTR {
+            height: 290px;
+
+            &::before {
+              height: 280px;
+            }
+          }
+
+          .vTL {
+            height: 200px;
+
+            &::before {
+              height: 190px;
+            }
+          }
+        }
+
+        .conceTxt {
+          line-height: 1.5;
+          margin-top: 20px;
+          padding-left: 40px;
+        }
+      }
+
+      .concept_rBx {
+        width: 35%;
+        min-width: 310px;
+        max-width: 400px;
+        margin-top: 230px;
+        margin-left: 30px;
+      }
+      
+      .conceMapTxt {
+        font-size: 10px;
+      }
+    }
+
+    /* SDGs・Access・Plan */
+    .linksFl {
+      display: flex;
+      justify-content: right;
+      flex-direction: row-reverse;
+      width: 95%;
+      height: 600px;
+      margin: 60px 0 0 auto;
+
+      .lImgBx {
+        overflow: hidden;
+        width: 60%;
+        height: 100%;
+
+        .lImg_SDGs {
+          background-image: url(../../assets/img/common/SDGs.jpg);
+          background-size: cover;
+          background-position: 80% 50%;
+          position: relative;
+          // width: 60%;
+          width: 100%;
+          height: 100%;
+          transition: 5s ease;
+
+          .SDGsNoti {
+            color: #fff;
+            text-align: right;
+            font-size: 10px;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+          }
+        }
+      }
+
+      .expan {
+        transform: scale(2.0,2.0);
+        opacity: 0;
+      }
+
+      .lTxts {
+        width: 37%;
+        margin: 100px 0;
+        border-bottom: solid 1px #000;
+
+        .linksTxt {
+          margin: 30px auto 0;
+          padding: 0 10px;
+        }
+      }
+
+      .lImgBx {
+        .lImg_acc {
+          background-image: url(../../assets/img/common/Access.jpg);
+          background-size: cover;
+          position: relative;
+          width: 100%;
+          height: 100%;
+          transition: 5s ease;
+        }
+
+        .lImg_plan {
+          background-image: url(../../assets/img/common/Plan.jpg);
+          background-size: cover;
+          position: relative;
+          width: 100%;
+          height: 100%;
+          transition: 5s ease;
+
+          .planNoti {
+            color: #000;
+            text-align: right;
+            font-size: 10px;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+          }
+        }
+      }
+    }
+
+    .accFl {
+      justify-content: left;
+      flex-direction: row;
+      margin: 60px auto 0 0;
+    }
+
+    /* Location・Design・Brand */
+    .othLinks {
+      // height: 800px;
+      padding-top: 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 400px 400px;
+      grid-template-areas: 
+      "location design"
+      "brand brand";
+    }
+
+    .location {
+      background-image: url(../../assets/img/common/location.jpg);
+      grid-area: location;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      div {
+        // width: 80%;
+
+        .othLHL {
+          font-size: 36px;
+          color: #fff;
+          text-align: center;
+          border-bottom: solid 1px #8e8060;
+          padding-bottom: 10px;
+        }
+
+        .othLMHL {
+          font-size: 12px;
+          color: #fff;
+          text-align: center;
+          padding-top: 10px;
+        }
+
+        .othLTxt {
+          color: #fff;
+          text-align: center;
+          margin-top: 20px;
+        }
+      }
+
+      .SDGsNoti {
+        color: #fff;
+        text-align: right;
+        font-size: 10px;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+      } 
+    }
+
+    .design {
+      background-image: url(../../assets/img/common/design.jpg);
+      grid-area: design;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      div {
+        .othLHL {
+          font-size: 36px;
+          color: #fff;
+          text-align: center;
+          border-bottom: solid 1px #8e8060;
+          padding-bottom: 10px;
+        }
+
+        .othLMHL {
+          font-size: 12px;
+          color: #fff;
+          text-align: center;
+          padding-top: 10px;
+        }
+
+        .othLTxt {
+          color: #fff;
+          text-align: center;
+          margin-top: 20px;
+        }
+      }
+
+      .SDGsNoti {
+        color: #fff;
+        text-align: right;
+        font-size: 10px;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+      } 
+    }
+
+    .brand {
+      background-image: url(../../assets/img/common/brand.jpg);
+      grid-area: brand;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      div {
+        .othLHL {
+          font-size: 36px;
+          color: #fff;
+          text-align: center;
+          border-bottom: solid 1px #8e8060;
+          padding-bottom: 10px;
+        }
+
+        .othLMHL {
+          font-size: 12px;
+          color: #fff;
+          text-align: center;
+          padding-top: 10px;
+        }
+
+        .othLTxt {
+          color: #fff;
+          text-align: center;
+          margin-top: 20px;
+        }
+
+      }
+
+      .SDGsNoti {
+        color: #fff;
+        text-align: right;
+        font-size: 10px;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+      } 
+    }
+  }
+
+  /* 注釈 */
+  .note {
+    padding: 40px 0;
+
+    .noteIn {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+
+      .noteFl {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        .noteTxt {
+          font-size: 10px;
+          width: 60%;
+          margin-top: 60px;
+        }
+
+        .noteImgBx {
+          width: 35%;
+          min-width: 300px;
+        }
+      }
+    }
+  }
+
+  /* フッター */
+  .fInner {
+    width: 90%;
+    max-width: 1213px;
+    // height: 100%;
+    margin: 0 auto;
+
+    .fBtnBx {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 0 40px;
+
+      .fBtn {
+        width: 45%;
+        height: 45px;
+        border: none;
+        font-size: 20px;
+        letter-spacing: 0.25em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        a {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          p {
+            color: #fff;
+          }
+        }
+      }
+
+      /* 「資料請求はこちら」ボタン擬似要素 */
+      .doc_fBtn::before{
+        content: "";
+        background: linear-gradient(90deg,#9F0116 0%,#B9615A 50%,#671317 100%) !important;
+        width: 100%;
+        height: 100%;
+        // border: 1px solid #AC6913;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: .5s;
+        z-index: -1;
+      }
+
+      .doc_fBtn:hover{
+        &::before{
+            opacity: 0;
+        }
+
+        a {
+          p {
+            color: #9F0116;
+          }
+        }
+      }
+
+      /* 「来場予約はこちら」ボタン擬似要素 */
+      .vis_fBtn::before{
+        content: "";
+        background: linear-gradient(90deg,#DFB66F 0%,#C98700 50%,#AC6913 100%);
+        width: 100%;
+        height: 100%;
+        // border: 1px solid #AC6913;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: .5s;
+        z-index: -1;
+      }
+
+      .vis_fBtn:hover{
+        &::before{
+            opacity: 0;
+        }
+
+        a {
+          p {
+            color: #AC6913;
+          }
+        }
+      }
+    }
+  }
+
+  .fnavBx {
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(0deg,#99846b,#b7a897);
+
+    .fInner {
+      width: 90%;
+      max-width: 1213px;
+      height: 100%;
+      margin: 0 auto;
+
+      .fNav {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+
+        .fNavLink {
+          height: 80%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-left: #000 1px solid;
+          // color: #000;
+          // font-size: 16px;
+          font-size: clamp(10px, inc_set.$vw_10px, 16px);
+          // padding: 0 20px;
+          flex: auto;
+          position: relative;
+
+          a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            p {
+              color: #000;
+              position: relative;
+
+              &:after {
+                position: absolute;
+                left: 0;
+                content: '';
+                width: 100%;
+                height: 1px;        
+                background: #000000;
+                bottom: -3px;
+                transform: scale(0, 1);
+                transform-origin: center top;
+                transition: .3s;
+              }       
+            }
+
+            &:hover {
+              p:after {
+                transform: scale(1, 1);
+              }
+            }  
+          }
+        }
+      }
+    }
+  }
+
+  .fTxt {
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .fTel {
+    display: block;
+    width: 500px;
+    margin: 20px auto 0;
+  }
+
+  .fLogoBx {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+
+    .fLogoCont {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .fLogoTxt {
+        width: auto;
+        line-height: 24px;
+        margin-right: 10px;
+      }
+
+      .fLogo {
+        display: block;
+        width: 60%;
+      }
+    }
+  }
+
+  .copyRight {
+    margin-top: 40px;
+    height: 40px;
+    background-color: #8E8060;
+    color: #fff;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sp_hSpace {
+    display: none;
+  }
+
+  /* レスポンシブ時改行 */
+  .sp1050 {
+    display: none;
+  }
+
+  .sp1290 {
+    display: none;
+  }
+
+  .sp1450 {
+    display: none;
+  }
+
+  .sp1420 {
+    display: none;
+  }
+
+  .sp768 {
+    display: none;
+  }
+
+  .sp560 {
+    display: none;
+  }
+
+  .sp450 {
+    display: none;
+  }
+
+  // 大画面表示 ______________________________________
+  // @media screen and (min-width: 1000px){
+  //   /* 予約受付中 */
+  //   .reserve {
+  //     .resInner {
+  //       .resHL {
+  //         .resHL_bor {
+  //           width: 32.5%;
+  //         }
+    
+  //         .resHL_txt {
+  //           width: 35%;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+
+  // 縮小表示 ______________________________________
+  @media screen and (max-width: 1500px){
+    /* ヘッダー */
+    // header .hInner .hNav {
+    //   width: 1012px;
+    // }
+
+    header {
+      .hInner {
+        .hNav {
+          width: 1012px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1450px){
+    /* ヘッダー */
+    .sp1450 {
+      display: inline;
+    }
+  }
+
+  @media screen and (max-width: 1420px){
+    /* ヘッダー */
+    header {
+      .hInner {
+        .top_header {
+          .hLinkBx {
+            .hBtn {
+              width: 170px;
+            }
+          }
+        }
+      }
+    }
+
+    .sp1420 {
+      display: inline;
+    }
+
+    .w150 {
+      width: 100px !important;
+    }
+  }
+  @media screen and (max-width: 1350px){
+    /* フッター */
+    // .fnavBx {
+    //   .fInner {
+    //     .fNav {
+    //       .fNavLink {
+    //         padding: 0 9px;
+    //       }
+    //     }
+    //   }
+    // }
+  }
+
+  @media screen and (max-width: 1320px){
+    /* コストパフォーマンス */
+    .cospa {
+      .cosFlex_pri {
+        row-gap: 20px;
+        justify-content: center;
+        align-items: center;
+        // display: grid;
+        // grid-template-columns: 1fr 1fr;
+        // grid-template-rows: 400px 400px;
+        // grid-template-areas: 
+        // "repay repay"
+        // "width price";
+    
+        .pt25 {
+          padding-top: 0;
+        }
+    
+        // .pt20 {
+        //   padding-top: 80px !important;
+        // }
+    
+        .sp_w100 {
+          width: 100%;
+          text-align: center;
+        }
+    
+        .cosFSenBx {
+          // padding-top: 10px;
+          margin-top: 30px;
+    
+          .cosFSenTxt {
+            padding-top: 10px;
+            font-size: clamp(10px, inc_set.$vw_35px, 42px);
+          }
+        }
+    
+        p {
+          .txtBx {
+            width: 210px;
+            font-size: clamp(10px, inc_set.$vw_20px, 16px);
+          }
+    
+          .coGradNum {
+            font-size: clamp(10px, inc_set.$vw_50px, 48px);
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1290px){
+    /* コストパフォーマンス */
+    .cospa {
+      .cosFlex_spec {
+        width: 600px;
+      }
+    }
+
+    /* limited */
+    .pc1290 {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 1250px){
+    /* ファーストビュー */
+    .fv{
+      .fvInn {
+        .fvCatImg {
+          left: 1%;
+        }
+      
+        .fvExtImg {
+          left: 15%;
+        }
+        
+        .fvPriImg {
+          left: 2%;
+        }
+        
+        .fvTxt {
+          right: 3%;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1240px){
+    /* ヘッダー */
+    header {
+      .hInner {
+        .top_header {
+          .hLogoBx {
+            width: 250px;
+
+            .hLogo {
+              margin-top: 25px;
+            }
+          }
+        }
+
+        .hNav {
+          width: 860px;
+
+          .navLink {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1150px){
+    /* ファーストビュー */
+    .fv{
+      height: 850px;
+
+      .fvInn {
+        .fvCatImg {
+          left: 50%;
+          transform: translate(-50%, 25px);
+          &.show{
+            transform: translate(-50%, 0);
+          }
+        }
+      
+        .fvExtImg {
+          width: 70%;
+          min-width: 640px;
+          left: 50%;
+          transform: translate(-50%, 25px);
+          &.show{
+            transform: translate(-50%, 0);
+          }
+        }
+        
+        .fvPriImg {
+          left: 10%;
+        }
+        
+        .fvTxt {
+          right: 80px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1130px){
+    /* ヘッダー */
+    header .hInner .top_header .hLinkBx .hBLink,
+    header .hInner .top_header .hLinkBx .hBtn {
+      font-size: 14px;
+    }
+
+    header .hInner .top_header .hLinkBx .hBtn {
+      width: 120px;
+    }
+
+    .w150 {
+      width: 80px !important;
+    }
+  }
+
+  @media screen and (max-width: 1050px){
+    /* フッター */
+    // .fInner,
+    // .fnavBx .fInner {
+    //   width: 915px;
+    // }
+
+    .sp1050 {
+      display: inline;
+    }
+  }
+
+  // @media screen and (max-width: 960px){
+  //   /* フッター */
+  //   .fnavBx {
+  //     height: 120px;
+
+  //     .fInner {
+  //       .fNav {
+  //         flex-wrap: wrap;
+
+  //         .fNavLink {
+  //           height: 40%;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+
+  @media screen and (max-width: 950px){
+    /* ヘッダー */
+    .pt10h35_sp1420 {
+      padding-top: 12.5px !important;
+      height: 32.5px !important;
+    }
+
+    header .hInner .top_header .hLinkBx .hBLink,
+    header .hInner .top_header .hLinkBx .hBtn {
+      font-size: 12px;
+    }
+
+    header .hInner .top_header .hLinkBx .hBLink {
+      width: 90px;
+    }
+
+    .hBtn {
+      width: 95px;
+    }
+
+    .w150 {
+      width: 65px !important;
+    }
+
+    header .hInner .hNav {
+      width: 780px;
+    }
+
+    header .hInner .hNav .navLink {
+      font-size: 12px;
+    }
+
+    /* リンク一覧 */
+    .links {
+      .linksFl {
+        .lImg_SDGs {
+          background-position-x: 40%;
+        }
+
+        .lImg_acc {
+          background-position-x: 40%;
+        }
+
+        .lImg_plan {
+          background-position-x: 100%;
+        }
+      }
+    }
+
+    /* フッター */
+    // .fInner,
+    // .fnavBx .fInner {
+    //   width: 845px;
+    // }
+
+    // .fnavBx .fInner .fNav .fNavLink {
+    //   font-size: 14px;
+    //   padding: 0 10px;
+    // }
+  }
+
+  // @media screen and (max-width: 934px){
+  //   /* フッター */
+  //   .fnavBx {
+  //     height: 120px;
+
+  //     .fInner {
+  //       .fNav {
+  //         .fNavLink {
+  //           height: 40%;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+
+  @media screen and (max-width: 870px){
+    /* ヘッダー */
+    header .hInner .top_header .hLogoBx {
+      width: 220px;
+    }
+
+    .w60_sp870 {
+      width: 60px !important;
+    }
+
+    /* フッター */
+    // .fInner,
+    // .fnavBx .fInner {
+    //   width: 712px;
+    // }
+
+    // .fnavBx .fInner .fNav .fNavLink {
+    //   font-size: 12px;
+    //   padding: 0 8px;
+    // }
+  }
+
+  @media screen and (max-width: 800px){
+    /* ヘッダー */
+    header .hInner .top_header .hLogoBx {
+      width: 220px;
+    }
+
+    header .hInner .top_header .hLinkBx .hBLink {
+      width: 77px;
+    }
+
+    /* コストパフォーマンス */
+    .cospa {
+      .cosFlex_pri {
+        width: 90%;
+      }
+    }
+  }
+
+  /* ここから768px以下 */
+  @media screen and (max-width: inc_set.$media_sp){
+    /* ヘッダー */
+    header {
+      height: 80px;
+    }
+
+    header .hInner {
+      height: auto;
+    }
+
+    header .hInner .top_header .hLogoBx {
+      width: 300px;
+    }
+
+    .hSticky {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      opacity: 1;
+      visibility: visible;
+      animation: slideDown 0.3s ease-in-out;
+      background-color: #fff;
+      -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+      z-index: 10;
+    }
+
+    @keyframes slideDown {
+      0% {
+          transform: translateY(-100%);
+      }
+
+      100% {
+          transform: translateY(0%);
+      }
+    } 
+
+    .spHeader {
+      width: 100%;
+      height: 110px;
+      position: fixed;
+      bottom: 0;
+      z-index: 10;
+
+      .spHBtns {
+        width: 100%;
+        height: 60px;
+        display: flex;
+
+        .spHBtn {
+          display: flex;
+          width: 20%;
+          justify-content: center;
+          align-items: center;
+    
+          .hamBx {
+            width: 60px;
+            height: 30px;
+            text-align: center;
+    
+            .hamburger {
+              width: 40px;
+              height: 30px;
+              position: relative;
+              margin: -5px auto 0;
+    
+              .hamLine {
+                position: absolute;
+                /* width: 50px; */
+                width: 100%;
+                height: 1px;
+                right: 0;
+                background-color: #fff;
+                -webkit-transition: all 0.5s;
+                transition: all 0.5s;
+              }
+            
+              .hamLine__1 {
+                top: 0;
+              }
+            
+              .hamLine__2 {
+                top: 10px;
+              }
+            
+              .hamLine__3 {
+                top: 20px;
+              }
+            
+              /* ハンバーガーがクリックされたら✖️印にする */
+              .hamLine__1.active {
+                -webkit-transform: rotate(-45deg);
+                transform: rotate(-30deg);
+                top: 5px;
+              }
+            
+              .hamLine__2.active {
+                opacity: 0;
+              }
+            
+              .hamLine__3.active {
+                -webkit-transform: rotate(45deg);
+                transform: rotate(30deg);
+                top: 5px;
+              }
+            }
+          }
+        }
+        
+        .bgB {
+          background: linear-gradient(90deg,#421314 0%,#6F4B26 14%,#968058 77%,#805429 95%);
+        }
+        
+        .bgR {
+          background: linear-gradient(90deg,#9F0116 0%,#B9615A 50%,#671317 100%);
+        }
+        
+        .bgY {
+          background: linear-gradient(90deg,#DFB66F 0%,#C98700 50%,#AC6913 100%);
+        }
+      }
+
+      .spVisBtn {
+        display: block;
+        width: 100%;
+        height: 30px;
+        padding-top: 20px;
+        color: #fff !important;
+        text-align: center;
+      }
+
+      .bgG {
+        background: linear-gradient(90deg,#3E5674 0%,#718088 60%,#8096C5 100%);
+      }
+    }
+
+    .pc_none {
+      display: block;
+    }
+
+    .spMenu {
+      background-color: #000;
+      width: 100%;
+      height: calc(100vh - 110px);
+      position: fixed;
+      top: 0;
+      left: -100%;
+      transition: all 0.5s 0s ease;
+      z-index: 10;
+
+      .spNav {
+        width: 80%;
+        margin: 80px auto 0;
+
+        .sp_nLink {
+          display: block;
+          width: 100%;
+          font-size: 14px;
+          color: #fff !important;
+          margin: 20px 0;
+          transition: all 0.5s;
+
+          .nLinkEn {
+            display: inline-block;
+            font-size: 24px !important;
+            width: 50%;
+          }
+        }
+      
+        .sp_nLink:hover {
+          border-bottom: #fff 1px solid;
+        }
+      }
+    }
+
+    .spMenu.active {
+      left: 0;
+    }
+
+    /* メイン */
+    main{
+      .ttl{
+        font-size: inc_set.$vw_52px;
+        font-size: clamp(10px, inc_set.$vw_52px, 32px);
+      }
+      .lead{
+        font-size: inc_set.$vw_42px;
+        font-size: clamp(10px, inc_set.$vw_42px, 20px);
+      }
+      .text{
+        font-size: inc_set.$vw_24px;
+        font-size: clamp(10px, inc_set.$vw_24px, 14px);
+      }
+      .txt{
+        font-size: inc_set.$vw_20px;
+        font-size: clamp(10px, inc_set.$vw_20px, 12px);
+      }
+    }
+
+    /* ファーストビュー */
+    .fv{
+      height: 830px;
+
+      .fvInn {
+        .fvExtImg {
+          min-width: 500px;
+        }
+        
+        .fvTxt {
+          right: 20px;
+        }
+      }
+    }
+
+    /* アクセス */
+    .access {
+      .acFlex {
+        .acCont {
+          width: 90%;
+          margin: 0 auto;
+          border-right: none;
+          border-bottom: #fff 1px solid;
+          padding: 20px 0 10px;
+          // justify-content: space-between;
+
+          .acFlex_sp {
+            display: flex;
+            // align-items: stretch;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+
+            .ac_tTxt1 {
+              width: 100%;
+            }
+
+            .ac_mTxt1 {
+              width: 80%;
+              font-size: clamp(10px, inc_set.$vw_40px, 44px);
+
+              .mTxt1_l {
+                font-size: clamp(10px, inc_set.$vw_85px, 80px);
+              }
+            }
+
+            .ac_bTxt1 {
+              width: 20%;
+              font-size: clamp(10px, inc_set.$vw_24px, 24px);
+            }
+
+            .ac_tTxt2 {
+              padding-right: 10px;
+            }
+
+            .ac_mTxt2 {
+              font-size: clamp(10px, inc_set.$vw_25px, 44px);
+
+              .mTxt2_l {
+                font-size: clamp(10px, inc_set.$vw_55px, 68px);
+              }
+            }
+
+            .ac_tTxt3 {
+              padding-right: 10px;
+            }
+
+            .ac_mTxt3 {
+              font-size: clamp(10px, inc_set.$vw_20px, 44px);
+              text-align: center;
+
+              .mTxt3_l {
+                font-size: clamp(10px, inc_set.$vw_40px, 68px);
+              }
+            }
+
+            .ac_bTxt3 {
+              padding-left: 10px;
+              padding-top: 10px;
+            }
+          }
+
+          .alC {
+            align-items: center;
+          }
+
+          // .jcSB {
+          //   justify-content: space-between;
+          // }
+        }
+      }
+    }
+
+    /* コストパフォーマンス */
+    .cospa {
+      .cosTxt {
+        width: 90%;
+        max-width: 400px;
+        position: relative;
+        padding-bottom: 0;
+
+        .sp_pl4 {
+          padding-left: 4%;
+        }
+
+        .taC {
+          text-align: center;
+        }
+
+        .pal20 {
+          position: absolute;
+          left: 90px;
+        }
+
+        .lh120 {
+          line-height: 120px !important;
+
+          .sp_fs56 {
+            font-size: 56px !important;
+          }
+
+          .sp_fs80 {
+            font-size: 80px !important;
+          }
+        }
+
+        .astarisk {
+          left: 53%;
+          top: 40%;
+        }
+      }
+
+      .cosFlex_pri {
+        column-gap: 0;
+        justify-content: space-between;
+      }
+
+      .cosFlex_spec {
+        width: 90%;
+        column-gap: 5px;
+        row-gap: 5px;
+
+        .sp_h124 {
+          height: 104px;
+        }
+      }
+    }
+
+    /* 予約受付中 */
+    .reserve {
+      .resInner {
+        .resHL {
+          .resHL_txt {
+            padding: 0;
+          }
+        }
+
+        .fCatch {
+          line-height: 40px;
+        }
+
+        .resBtnBx {
+          display: block;
+          margin: 20px auto 0;
+    
+          .resBtn {
+            width: 80%;
+            margin: 20px auto;
+          }
+        }
+      }
+    }
+
+    /* INFORMATION等ここから */
+
+    /* INFORMATION */
+
+    .informations {
+      .infoInn {
+        .information {
+          display: block;
+
+          .infoHL {
+            margin-bottom: 20px;
+          }
+        }
+
+        /* limited */
+        .limited {
+          margin-bottom: 60px;
+
+          .limFlex {
+            display: block;
+            margin: 0 auto;
+
+            .limCon {
+              width: auto;
+              padding: 30px 0 50px; 
+
+              .limConHL {
+                font-size: clamp(24px, inc_set.$vw_40px, 32px);
+              }
+
+              .limConTxt {
+                text-align: left;
+                font-size: clamp(10px, inc_set.$vw_25px, 16px);
+                margin: 0;
+              }
+
+              .pc768 {
+                display: none;
+              }
+
+              .limImgFlex {
+                display: flex;
+
+                .limImg {
+                  width: 45%;
+                  padding-top: 21.2%;
+                }
+
+                .limPan {
+                  background-position-x: center;
+
+                  .imgTxt_pan {
+                    // right: 18px;
+                    right: 7.5%;
+                    bottom: 2.5px;
+                    font-size: clamp(1px, inc_set.$vw_10px, 10px);
+                  }
+                }
+
+                .limRoom {
+                  background-position-x: center;
+
+                  .imgTxt_din {
+                    font-size: clamp(1px, inc_set.$vw_10px, 10px);
+                    bottom: 2.5px;
+                  }
+                }
+
+                .limDoc,.limInfo {
+                  background-position-x: center;
+                }
+              }
+
+              .limConR {
+                font-size: clamp(18px, inc_set.$vw_40px, 32px);
+                margin-bottom: 20px;
+              }
+
+              .passBx {
+                .logBtn {
+                  a {
+                    .lBtnTxt {
+                      font-size: clamp(10px, inc_set.$vw_30px, 20px);
+                    }
+                  }
+                }
+              }
+            }
+
+            .borRig {
+              border-right: none;
+            }
+          }
+
+          div {
+            .noPassHL {
+              font-size: clamp(12px, inc_set.$vw_30px, 24px);
+            }
+
+            .noPassFlex {
+              display: block;
+              width: 80%;
+              margin: 20px auto 0;
+
+              .noPFlCon {
+                width: 100%;
+
+                .noPassTxt {
+                  text-align: left;
+                  font-size: clamp(10px, inc_set.$vw_25px, 16px);
+                }
+
+                .noPassBtn {
+                  margin-top: 20px;
+
+                  &.mt16 {
+                    margin-top: 16px;
+                  }
+                }
+
+                .sp_none {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+
+        .banners {
+          width: 100%;
+
+          .banImg {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    /* リンク一覧 */
+    .links {
+      .concept {
+        display: block;
+
+        .concept_lBx {
+          width: 100%;
+
+          .conceHL,.conceMHL {
+            width: 80%;
+            margin: 0 auto;
+          }
+
+          .verticalTxtBx {
+            justify-content: left;
+            padding-left: 10%;
+          }
+
+          .conceTxt {
+            padding-left: 0;
+          }
+        }
+
+        .concept_rBx {
+          margin: 30px auto 0;
+          width: 100%;
+          min-width: auto;
+        }
+      }
+
+      .linksFl {
+        display: block;
+        height: auto;
+        width: 90%;
+        margin: 40px auto;
+
+        .lImgBx {
+          width: 100%;
+        
+          .lImg_SDGs {
+            width: 100%;
+            height: 0;
+            // padding-top: 93%;
+            padding-top: 65%;
+          }
+
+          .lImg_acc {
+            width: 100%;
+            height: 0;
+            padding-top: 65%;
+          }
+
+          .lImg_plan {
+            width: 100%;
+            height: 0;
+            padding-top: 65%;
+          }
+        }
+
+        .lTxts {
+          width: 90%;
+          margin: 20px auto;
+          padding-bottom: 40px;
+        }
+      }
+
+      /* Location・Design・Brand */
+      .othLinks {
+        grid-template-columns: 1fr;
+        grid-template-rows: 400px 400px 400px;
+        grid-template-areas: 
+          "location"
+          "design"
+          "brand";
+
+          .location {
+            div {
+              .othLTxt {
+                .sp1050 {
+                  display: none;
+                }
+              }
+            }
+          }
+      }
+    }
+
+    /* 注釈 */
+    .note {
+      .noteIn {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+    
+        .noteFl {
+          display: block;
+
+          .noteTxt {
+            width: 100%;
+            margin-top: 0px;
+          }
+
+          .noteImgBx {
+            width: 100%;
+            text-align: center;
+            margin-top: 40px;
+
+            .noteImg {
+              max-width: 400px;
+            }
+          }
+        }
+      }
+    }
+
+    /* フッター */
+    .fInner,
+    .fnavBx .fInner {
+      width: 80%;
+    }
+
+    .fInner .fCatch {
+      font-size: 44px;
+      line-height: 66px;
+    }
+
+    .sp768 {
+      display: inline;
+    }
+    
+    .fs30 {
+      font-size: 20px !important;
+    }
+
+    .fInner .fBtnBx {
+      display: block;
+      width: 323px;
+      margin: 0 auto;
+    }
+
+    .fInner .fBtnBx .fBtn {
+      width: 100%;
+      margin: 20px auto;
+    }
+
+    header .hInner .top_header .sp_none,
+    header .hInner .sp_none,
+    .sp_none {
+      display: none;
+    }
+
+    .sp_hSpace {
+      height: 110px;
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 720px){
+    /* フッター */
+    .fInner .fLogoBx {
+      display: block;
+      margin: 0 auto;
+      padding-top: 0;
+    }
+
+    .fInner .fLogoBx .fLogoCont {
+      margin: 30px auto;
+    }
+  }
+
+  @media screen and (max-width: 600px){
+    /* リンク一覧 */
+    .links {
+      background-position-x: 90%;
+    }
+  }
+
+  @media screen and (max-width: 560px){
+    /* Location・Design・Brand */
+    .links{
+      .othLinks {
+        .location {
+          div {
+            .othLTxt {
+              .sp560 {
+                display: inline;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    /* フッター */
+    .fTxt {
+      line-height: 24px;
+    }
+
+    .sp560 {
+      display: inline;
+    }
+
+    .fTel {
+      width: 400px;
+    }
+  }
+
+  @media screen and (max-width: 500px){
+    /* ファーストビュー */
+    .fv{
+      height: 600px;
+
+      .fvInn {
+        .fvCatImg {
+          width: 220px;
+        }
+      
+        .fvExtImg {
+          min-width: 300px;
+        }
+        
+        .fvPriImg {
+          width: 120px;
+          top: 320px;
+        }
+        
+        .fvTxt {
+          right: 0;
+        }
+      }
+    }
+
+    /* フッター */
+    .copyRight {
+      font-size: 10px;
+    }
+  }
+
+  @media screen and (max-width: 450px){
+    /* ヘッダー */
+    .spHeader .spHBtns .spHBtn {
+      font-size: 12px !important;
+    }
+
+    /* アクセス */
+    .access {
+      .acSubTxt {
+        font-size: 18px;
+      }
+    }
+
+    /* コストパフォーマンス */
+    .cospa {
+      .cosTxt {
+        .fs28v {
+          .astarisk {
+            // left: 55%;
+          }
+
+          .fs42v {
+            .ls-20 {
+              letter-spacing: 0 !important;
+            }
+          }
+        }
+      }
+
+      .cosFlex_pri {
+        p {
+          .txtBx {
+            width: auto;
+          }
+        }
+      }
+    }
+
+    /* リンク一覧 */
+    .links {
+      .concept {
+        .concept_lBx {
+          .verticalTxtBx {
+            padding-left: 0;
+
+            .verticalTxt {
+              padding-left: 10px;
+
+              &::before {
+                margin-left: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    /* フッター */
+    .fInner,
+    .fnavBx .fInner {
+      width: 90%;
+    }
+
+    .fInner .fCatch {
+      font-size: 34px;
+      line-height: 51px;
+    }
+
+    .fInner .fBtnBx .fBtn {
+      width: 300px;
+    }
+
+    .fTel {
+      width: 350px;
+    }
+
+    .copyRight {
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    .sp450 {
+      display: inline;
+    }
+  }
+
+  @media screen and (max-width: 340px){
+    /* アクセス */
+    .access {
+      .acFlex {
+        .acCont {
+          padding: 10px 0;
+
+          .acFlex_sp {
+            .ac_tTxt2 {
+              padding-right: 0;
+            }
+
+            .ac_tTxt3 {
+              padding-right: 0;
+            }
+
+            .ac_bTxt3 {
+              padding-left: 0;
+            }
+          }
+        }
+      }
+    }
+
+    /* コストパフォーマンス */
+    .cospa {
+      .cosFlex_spec {
+        .specCon {
+          p {
+            .sp340 {
+              display: inline;
+            }
+          }
+        }
+      }
+    }
+  }
+}

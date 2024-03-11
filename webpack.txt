@@ -1,0 +1,59 @@
+基本情報
+
+node -v
+v16.14.2
+
+npm -v
+8.5.0
+
+npx webpack -v
+webpack: 5.72.0
+webpack-cli: 4.9.2
+
+
+
+コマンド
+
+DS.store削除
+find / -name ".DS_Store" -delete
+
+Finderの再起動
+killall Finder
+
+パッケージのインストール
+npm ci
+
+バージョン確認
+npx webpack -v
+
+ヘルプを表示
+npx webpack -h
+
+実行
+npx webpack
+
+watch
+npx webpack watch
+
+終了
+control + c
+//
+
+
+
+ディレクトリ階層（任意の階層へ変更可）
+
+Directory Name(ディレクトリ名)
+├── node_modules        //node modules
+├── package.json        //json file
+├── webpack.config.js   //webpack config
+└─- public_html         //contents
+    ├── assets
+        ├── img         //圧縮済みの画像の出力先
+        ├── css         //コンパイル後のcssファイルの出力先
+        └── js          //トランスパイル後のjsファイルの出力先
+    ├── src
+        ├── img-max     //圧縮前の画像ファイル格納場所
+        ├── js          //トランスパイル前のtsファイル格納場所
+        └── scss        //コンパイル前のscssファイル格納場所
+    └── index.html

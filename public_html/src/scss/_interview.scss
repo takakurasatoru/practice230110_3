@@ -1,0 +1,580 @@
+@use "inc/setting" as inc_set;
+@use "inc/reset" as inc_re;
+
+#interview {
+    main {
+
+        /* 共通部分 */
+        .intCatch {
+            color: #8B7B4F;
+            background-color: #fff;
+            font-size: clamp(10px, inc_set.$vw_12px, 23px);
+        }
+
+        .txt {
+            line-height: 2;
+            font-size: clamp(10px, inc_set.$vw_10px, 16px);
+        }
+
+        .imgNotice {
+            font-size: 10px;
+            color: #fff;
+            position: absolute;
+            // right: 10px;
+            // bottom: 10px;
+
+            &.coBl {
+                color: #000;
+            }
+        }
+
+        /* 上部キャッチ */
+        .catch {
+            background-image: url(../../assets/img/interview/catchImg.jpg);
+            background-size: cover;
+            padding: 80px 0 40px;
+
+            .catchHL {
+                font-size: 40px;
+                text-align: center;
+                // margin-top: 40px;
+            }
+
+            .catchTxt {
+                font-size: 24px;
+                text-align: center;
+                line-height: 2;
+                margin-top: 20px;
+            }
+        }
+
+        /* ABINC */
+        .ABINC {
+            background-image: url(../../assets/img/interview/ABINCImg.jpg);
+            background-size: cover;
+            padding: 40px 0;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                // display: block;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                background-color: rgba(0,0,0,0.4);
+            }
+
+            .ABINCHL {
+                text-align: center;
+                z-index: 10;
+                position: relative;
+                width: 100%;
+                padding: 10px 0;
+                margin-bottom: 40px;
+                background: linear-gradient(90deg,rgba(0,0,0,0) 0%,#fff 50%,rgba(0,0,0,0) 100%);
+
+                .ABINCHImg {
+                    width: 80%;
+                }
+            }
+
+            .ABINCMHL {
+                font-size: 40px;
+                text-align: center;
+                line-height: 1.5;
+                background: linear-gradient(90deg,#DED69B 0%,#FEF2EA 50%,#DED69B 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                z-index: 10;
+                position: relative;
+            }
+
+            .ABINCTxt {
+                color: #fff;
+                font-size: 20px;
+                line-height: 2;
+                text-align: center;
+                margin-top: 20px;
+                z-index: 10;
+                position: relative;
+            }
+
+            .ABINCDes {
+                color: #fff;
+                text-align: center;
+                font-size: 15px;
+                width: 90%;
+                max-width: 800px;
+                padding: 20px 0;
+                margin: 20px auto 0;
+                line-height: 1.5;
+                background-color: #22512A;
+                border: 1px solid #FEF2EA;
+                z-index: 10;
+                position: relative;
+            }
+        }
+
+        /* Special Interview */
+        .interview {
+            background-image: url(../../assets/img/interview/backImg.jpg);
+            // background-size: cover;
+            background-size: contain;
+            padding: 80px 0;
+            margin-bottom: 80px;
+
+            .interviewHL {
+                background-color: #fff;
+                color: #8b7b4f;
+                font-size: 60px;
+                padding: 10px 0;
+                padding-left: 15%;
+            }
+
+            .interInner {
+                width: 80%;
+                // height: 1000px;
+                margin: 0 auto;
+                // border-left: 1px solid #000;
+                padding-top: 40px;
+                position: relative;
+
+                &.pt120 {
+                    padding-top: 120px;
+                }
+
+                .lBor {
+                    width: 1px;
+                    height: calc(100% + 160px);
+                    position: absolute;
+                    left: 0;
+                    top: -160px;
+                    background-color: #000;
+                }
+
+                .interTopFlex {
+                    display: flex;
+                    justify-content: space-between;
+                    padding-left: 5%;
+                    padding-bottom: 80px;
+
+                    div {
+                        .interCatch {
+                            font-size: clamp(12px, inc_set.$vw_20px, 41px);
+                            line-height: 2.5;
+                            margin-bottom: 30px;
+                        }
+
+                        // .interTxt {
+                        //     font-size: clamp(10px, inc_set.$vw_10px, 19px);
+                        //     line-height: 2;
+                        // }
+                    }
+
+                    .interTopImg {
+                        width: 50%;
+                        margin-top: 60px;
+                    }
+                }
+
+                .circle {
+                    position: absolute;
+                    left: -7.5px;
+                    top: -7.5px;
+                    width: 15px;
+                    height: 15px;
+                }
+
+                .interNum {
+                    width: 25%;
+                    max-width: 250px;
+                    padding-left: 40px;
+                }
+
+                /* interview01 */
+                .inter01Fl_1 {
+                    display: flex;
+                    justify-content: space-between;
+                    padding-left: 1%;
+                    margin-top: 40px;
+                    max-height: 425px;
+
+                    .Fl_1_Img {
+                        width: 50%;
+                        position: relative;
+
+                        .inter1 {
+                            position: absolute;
+                            writing-mode: vertical-lr;
+                            -ms-writing-mode: tb-rl;
+                            padding: 5px 8px 5px 1px;
+                            height: 26vw;
+                            max-height: 390px;
+                            top: 7%;
+                            width: auto;
+
+                            &.left75 {
+                                left: 75px;
+
+                                .ls-10 {
+                                    letter-spacing: -10px;
+                                }
+                            }
+
+                            &.left30 {
+                                left: 30px;
+                            }
+                        }
+                    }
+
+                    .Fl_1_TxtBx {
+                        width: 45%;
+                        // line-height: 1.5;
+                        // font-size: clamp(10px, inc_set.$vw_10px, 19px);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+
+                .inter01Fl_2 {
+                    display: flex;
+                    justify-content: right;
+                    margin-top: 40px;
+                    margin-bottom: 80px;
+
+                    .Fl_2_Img {
+                        width: 40%;
+                        padding-left: 5%;
+                        position: relative;
+
+                        .r10b10 {
+                            right: 10px;
+                            bottom: 10px;
+                        }
+                    }
+                }
+
+                /* interview02 */
+                .inter02Fl_1 {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: row-reverse;
+                    padding-left: 5%;
+
+                    .intCBx_inter2 {
+                        position: relative;
+
+                        .inter2 {
+                            position: absolute;
+                            padding: 10px 5px 5px 5px;
+                            width: 30vw;
+
+                            &.b80 {
+                                bottom: 80px;
+                            }
+
+                            &.b30 {
+                                bottom: 30px;
+                            }
+                        }
+                    }
+                }
+
+                .inter02Fl_2 {
+                    display: flex;
+                    justify-content: space-between;
+                    padding-left: 5%;
+                    margin: 40px 0 60px;
+
+                    .i02Fl_2_l {
+                        width: 50%;
+                        position: relative;
+
+                        .handImg {
+                            display: block;
+                            width: 85%;
+                            margin: 60px auto 0;
+                        }
+
+                        .r10b1 {
+                            right: 10%;
+                            bottom: 1%;
+                        }
+                    }
+
+                    .i02Fl_2_r {
+                        width: 40%;
+                        position: relative;
+                        
+                        .r4b23 {
+                            right: 4%;
+                            bottom: 23%;
+                        }
+
+                        .coBl {
+                            color: #000;
+                        }
+                    }
+                }
+
+                /* interview03 */
+                .inter03Fl_1 {
+                    display: flex;
+                    justify-content: space-between;
+                    height: 40vw;
+
+                    .i03Fl_1_l {
+                        position: relative;
+                        width: 30%;
+
+                        .interNum {
+                            width: 80%;
+                        }
+
+                        .inter3 {
+                            position: absolute;
+                            writing-mode: vertical-lr;
+                            -ms-writing-mode: tb-rl;
+                            text-orientation: upright;
+                            padding: 5px 8px 5px 1px;
+                            height: 20vw;
+                            max-height: 390px;
+                            top: 30%;
+                            width: auto;
+
+                            &.l50 {
+                                left: 50%;
+                            }
+
+                            &.l35 {
+                                left: 35%;
+                            }
+
+                            &.l20 {
+                                left: 20%;
+                            }
+
+                            .mt5 {
+                                margin-top: 5px;
+                            }
+                        }
+                    }
+
+                    .i03Fl_1_r {
+                        width: 70%;
+                        position: relative;
+
+                        .natureImg {
+                            position: absolute;
+                            width: 70%;
+                            top: 0;
+                            right: 0;
+
+                            .r10b10 {
+                                right: 10px;
+                                bottom: 10px;
+                            }
+                        }
+
+                        .womanImg {
+                            position: absolute;
+                            width: 40%;
+                            top: 17%;
+                            left: 0;
+
+                            .r10b10 {
+                                right: 10px;
+                                bottom: 10px;
+                            }
+                        }
+                    }
+                }
+
+                .inter03Fl_2 {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 60px;
+
+                    .i03Fl_2_l {
+                        width: 55%;
+                        padding-left: 5%;
+                    }
+
+                    .i03Fl_2_r {
+                        width: 37%;
+                        padding-left: 3%;
+                    }
+                }
+
+                /* interview4 */
+                .inter04Fl_1 {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: row-reverse;
+                    padding-left: 5%;
+
+                    .intCBx_inter4 {
+                        position: relative;
+
+                        .inter4 {
+                            position: absolute;
+                            padding: 10px 5px 5px 5px;
+                            width: 33vw;
+
+                            &.w31b80 {
+                                width: 31vw;
+                                bottom: 80px;
+                            }
+
+                            &.w20b30 {
+                                width: 20vw;
+                                bottom: 30px;
+                            }
+                        }
+                    }
+                }
+
+                .inter04Fl_2 {
+                    display: flex;
+                    justify-content: space-between;
+                    // height: 30vw;
+                    padding-left: 5%;
+                    margin: 40px 0 60px;
+
+                    .i04Fl_2_l {
+                        width: 58%;
+                        padding-right: 2%;
+                    }
+
+                    .i04Fl_2_r {
+                        width: 40%;
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        .dogwoodBx {
+                            width: 52%;
+                            position: relative;
+                            // position: absolute;
+                            // left: 0;
+                            // top: 8%;
+                        }
+
+                        .yamaboshiBx {
+                            width: 52%;
+                            margin: 20px auto;
+                            margin-right: 0;
+                            position: relative;
+                            // position: absolute;
+                            // right: 0;
+                            // bottom: 8%;
+                        }
+
+                        .dogwoodBx,.yamaboshiBx {
+                            .r0b-10 {
+                                right: 0;
+                                bottom: -10px;
+                            }
+                        }
+                    }
+                }
+
+                .forecastBx {
+                    width: 60%;
+                    margin: 0 auto 60px;
+
+                    .foreNotice {
+                        font-size: 10px;
+                        color: #000;
+                        text-align: right;
+                        margin-top: 10px;
+                    }
+                }
+
+                .katsuraBx {
+                    padding-left: 1%;
+                    margin-bottom: 80px;
+
+                    .kaNotice {
+                        font-size: 10px;
+                        color: #000;
+                    }
+                }
+
+                .proIntroBx {
+                    display: flex;
+                    justify-content: space-between;
+                    padding-left: 1%;
+                    margin-bottom: 40px;
+
+                    .proIntr_l {
+                        width: 40%;
+                    }
+
+                    .proIntr_r {
+                        width: 60%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        .wBx {
+                            background-color: #fff;
+                            color: #877437;
+                            width: 100%;
+                            // height: calc(30vw - 20%);
+                            padding: 10%;
+
+                            .lh1 {
+                                line-height: 1;
+                            }
+
+                            .proName {
+                                font-size: clamp(24px, inc_set.$vw_20px, 30px);
+                                margin: 20px 0;
+                            }
+                        }
+                    }
+                }
+
+                .preLink {
+                    color: #000;
+                    text-decoration: underline;
+                    font-size: 20px;
+                    padding-left: 5%;
+                }
+            }
+
+            .tBor {
+                width: 100%;
+                height: 1px;
+                background-color: #000;
+            }
+        }
+
+        // ______________________________________
+        @media screen and (max-width: 1150px){
+            
+        }
+
+        @media screen and (max-width: 850px){
+            
+        }
+
+        /* レスポンシブ */
+        @media screen and (max-width: inc_set.$media_sp){
+            
+        }
+
+        @media screen and (max-width: 500px){
+            
+        }
+
+        @media screen and (max-width: 420px){
+            
+        }
+    }
+}
