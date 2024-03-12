@@ -31,9 +31,20 @@ include(dirname(__FILE__) . '/assets/inc/header.php');
                 <div class="quaBx quaBx1 show">
 
                 </div>
-                <div class="quaBx quaBx2">
 
+                <!-- 2タブ目 -->
+                <div class="quaBx quaBx2">
+                    <div class="quaBxLead flex_area">
+                        <p><span>［省エネ･エコ］</span>地球に優しく、ずっと愛される住まいであるために、<br class="_sp">豊かな未来のために。</p>
+                        <p>Economy & Ecology</p>
+                    </div>
+                    <div class="lineHeading">
+                        <p>Low-E複層ガラス</p>
+                    </div>
+                    <p class="fcTxt">板ガラスの間に乾燥空気を封入し、特殊金属（Low-e膜）を施した「Low-E複層ガラス」を採用。紫外線を軽減する効果もあります。</p>
                 </div>
+
+                <!-- 3タブ目 -->
                 <div class="quaBx quaBx3">
                     <div class="quaBxLead flex_area">
                         <p><span>［快適・便利］</span>暮らし心地を高める</p>
@@ -452,12 +463,12 @@ include(dirname(__FILE__) . '/assets/inc/header.php');
                                 <p class="notice">※A-C（Cg）、A-F（Fg）、A-G（Gg）、B-B（Bg）、B-C（Cg）、B-D（Dg）、B-E（Eg）、B-F（Fg）、B-G（Gg）、C-B（Bt）、C-D、C-E、C-F、C-Gタイプに採用。</p>
                             </div>
                         </div>
-                        <div class="flex_area alstart w2">
-                            <div class="faciliCard w2">
+                        <div class="flex_area alstart w2 _spmt10">
+                            <div class="faciliCard w2 _spw2">
                                 <p class="fcLead">フルタイムロッカー</p>
                                 <p class="fcTxt">留守中に届いた荷物や郵便物を24時間いつでも受け取ることが可能な宅配ボックスを設置しています。</p>
                             </div>
-                            <div class="faciliCard w2">
+                            <div class="faciliCard w2 _spw2">
                                 <div>
                                     <img src="./assets/img/quality/s3_42.png">
                                 </div>
@@ -494,21 +505,21 @@ include(dirname(__FILE__) . '/assets/inc/header.php');
                         <p>STORAGE</p>
                     </div>
                     <div class="flex_area alstart">
-                        <div class="faciliCard">
+                        <div class="faciliCard w80_sp">
                             <div>
                                 <img src="./assets/img/quality/s3_45.jpg">
                             </div>
                             <p class="fcLead">クロゼット</p>
                             <p class="fcTxt">ハンガーパイプや可動棚を設けた使い勝手の良い収納スペースです。</p>
                         </div>
-                        <div class="faciliCard">
+                        <div class="faciliCard w80_sp">
                             <div>
                                 <img src="./assets/img/quality/s3_46.jpg">
                             </div>
                             <p class="fcLead">パントリー</p>
                             <p class="fcTxt">キッチンには食料品などの収納に便利なパントリーを設置しています。キッチンには食料品などの収納に便利なパントリーを設置しています。</p>
                         </div>
-                        <div class="faciliCard">
+                        <div class="faciliCard w80_sp">
                             <div>
                                 <img src="./assets/img/quality/s3_47.jpg">
                             </div>
@@ -516,7 +527,7 @@ include(dirname(__FILE__) . '/assets/inc/header.php');
                             <p class="fcTxt">布団やスーツケース、季節ものの家電などの収納に便利です。</p>
                             <p class="notice">※A-G（Gg）、C-B（Bt）タイプを除く。</p>
                         </div>
-                        <div class="faciliCard">
+                        <div class="faciliCard w80_sp">
                             <div>
                                 <img src="./assets/img/quality/s3_48.jpg">
                             </div>
@@ -524,7 +535,7 @@ include(dirname(__FILE__) . '/assets/inc/header.php');
                             <p class="fcTxt">アウトドア用品や常時使うことのない生活用品などをたっぷり収納できます。</p>
                             <p class="notice">※A-A（Ag）、A-B（Bg）、A-C（Cg）、A-D（Dg）、A-H（Hg）、B-A（Ag）、B-B（Bg）、C-A（At）、C-Gタイプに採用。</p>
                         </div>
-                        <div class="faciliCard">
+                        <div class="faciliCard w80_sp">
                             <div>
                                 <img src="./assets/img/quality/s3_49.jpg">
                             </div>
