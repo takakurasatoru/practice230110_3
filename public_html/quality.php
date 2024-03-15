@@ -28,27 +28,311 @@ include(dirname(__FILE__) . '/assets/inc/header.php');
                 美容・健康</p>
             </div>
             <div class="quaBxInner">
+                <!-- 1タブ目 -->
                 <div class="quaBx quaBx1 show">
+                    <div class="quaBxLead flex_area sp_jc">
+                        <p class="quaBxLTxt1"><span>［安心・安全］</span>安心の基本性能。将来にわたり高品質な暮らしをお届けします。</p>
+                        <p class="quaBxLTxt2">Safety & Security</p>
+                    </div>
+                    <!-- 永住を見据えた、確かな構造設計 -->
+                    <div class="faciliLead">
+                        <p>永住を見据えた、確かな構造設計</p>
+                    </div>
+                    <div class="flex_area alstart">
+                        <div class="w32">
+                            <div class="lineHeading">
+                                <p>ボイドスラブ工法</p>
+                            </div>
+                            <p class="fcTxt">住居部分のコンクリートスラブにボイド型枠を採用し、床の剛性を高めることにより、小梁が不要となり、すっきりとした空間になります。<span class="fs10">※玄関廻り、洗面室、浴室、トイレの一部、1F住戸床等を除きます。</span></p>
+                            <div class="imgBx">
+                                <img src="./assets/img/quality/s1_01_pc.png" class="_pc">
+                                <img src="./assets/img/quality/s1_01_sp.png" class="_sp">
+                            </div>
+                        </div>
+                        <div class="w31">
+                            <div class="lineHeading">
+                                <p>二重天井工法</p>
+                            </div>
+                            <p class="fcTxt">スラブと天井との間に空間を設けた二重天井にすることで給水管やガス管、電気ケーブル、換気扇のダクトなどの配管類を納めやすく、将来の間取り変更やリフォームもしやすくなります。</p>
+                            <div class="imgBx">
+                                <img src="./assets/img/quality/s1_02.png">
+                            </div>
+                            <p class="rNotice">概念図</p>
+                        </div>
+                    </div>
+                    <div class="flex_area alstart">
+                        <div class="w31">
+                            <div class="lineHeading">
+                                <p>直接基礎</p>
+                            </div>
+                            <p class="fcTxt">地盤調査結果により、地表面から約2.6m〜2.7m付近の支持地盤の上に直接、鉄筋コンクリート造の基礎を構築する直接基礎を採用。建物荷重をしっかりと支えます。</span></p>
+                            <div class="imgBx">
+                                <img src="./assets/img/quality/s1_03.png">
+                            </div>
+                            <p class="rNotice">概念図</p>
+                        </div>
+                        <div class="w31">
+                            <div class="lineHeading">
+                                <p>せん断補強筋</p>
+                            </div>
+                            <p class="fcTxt">柱に耐久性を持たせるとともに、せん断破壊を軽減するため約100mmのピッチでせん断補強筋（帯筋）を入れています。</p>
+                            <p class="notice">※中子筋・基礎パネルゾーン等を除きます。</p>
+                            <div class="imgBx">
+                                <img src="./assets/img/quality/s1_04.png">
+                            </div>
+                            <p class="rNotice">概念図</p>
+                        </div>
+                        <div class="w31">
+                            <div class="lineHeading">
+                                <p>ダブル配筋</p>
+                            </div>
+                            <p class="fcTxt">住戸壁は、鉄筋を二重に組み上げた「ダブル配筋」を採用。さらに住戸の外壁厚は約180mm以上を確保しました。</p>
+                            <p class="notice">※共用廊下面、バルコニー面の軽量気泡コンクリート部分を除きます。</p>
+                            <div class="imgBx">
+                                <img src="./assets/img/quality/s1_05.png">
+                            </div>
+                            <p class="rNotice">概念図</p>
+                        </div>
+                    </div>
+                    <div class="flex_area alstart">
+                        <div class="w31">
+                            <div class="lineHeading">
+                                <p>戸境壁</p>
+                            </div>
+                            <p class="fcTxt">隣り合う住戸との生活音に配慮し、戸境のコンクリート壁は、厚さ約200mmを確保しました。</p>
+                            <div class="imgBx">
+                                <img src="./assets/img/quality/s1_06.png">
+                            </div>
+                            <p class="rNotice">概念図</p>
+                        </div>
+                        <div class="w31">
+                            <div class="lineHeading">
+                                <p>アウトポール設計</p>
+                            </div>
+                            <p class="fcTxt">メインバルコニー側は、柱が室内に出ないアウトポール設計を採用しました。お部屋のすみずみまで利用できるので、広々とした空間が広がります。</p>
+                            <div class="imgBx">
+                                <img src="./assets/img/quality/s1_07.png">
+                            </div>
+                            <p class="rNotice">概念図</p>
+                        </div>
+                        <div class="w31">
+                            <div class="lineHeading">
+                                <p>断熱材</p>
+                            </div>
+                            <p class="fcTxt">建物全体をくるむように、屋上や壁、床裏（住戸最下階）に断熱材を入れ、夏涼しく冬暖かい住み心地を実現。断熱性に優れた発泡硬質ウレタンフォームを、壁に約40mmの厚さで吹き付けることで、結露も軽減します。</p>
+                            <div class="imgBx">
+                                <img src="./assets/img/quality/s1_08.png">
+                            </div>
+                            <p class="rNotice">概念図</p>
+                        </div>
+                    </div>
+                    <div class="flex_area alstart">
+                        <div class="w31">
+                            <div class="lineHeading">
+                                <p>水セメント比</p>
+                            </div>
+                            <p class="fcTxt">コンクリートの強度を左右する指標のひとつが、コンクリート調合（配合）におけるセメント量に対する水の量の重量比。数値が低いほど密実な、耐久性の高いコンクリートとなります。「ジェイグラン京都西大路」では、コンクリートの水セメント比を50％<span class="fs10">※1</span>以下としています。</p>
+                            <p class="notice">※1.コンクリートの性質上、乾燥収縮や温度変化による伸縮に伴うひび割れが発生する場合があります（一般的に構造上の問題はありません）。※外構、外構工作物、設備架台基礎、土間コンクリート等住棟以外の付属建物を除きます。</p>
+                        </div>
+                        <div class="w31">
+                            <div class="lineHeading">
+                                <p>対震枠付玄関ドア</p>
+                            </div>
+                            <p class="fcTxt">地震などの力により、玄関ドア枠が多少変形しても扉が開閉できる対震枠付玄関ドアを採用しています。</p>
+                            <div class="imgBx">
+                                <img src="./assets/img/quality/s1_09.png">
+                            </div>
+                            <p class="rNotice">概念図</p>
+                        </div>
+                        <div class="w31">
+                            <div class="lineHeading">
+                                <p>住宅性能評価取得</p>
+                            </div>
+                            <p class="fcTxt">「ジェイグラン京都西大路」では、設計時に申請する設計住宅性能評価は取得済み。現場検査を経て交付される建設住宅性能評価を取得する予定です。</p>
+                            <p class="notice">※空気環境に関することの換気対策、室内空気中の化学物質の濃度、音環境に関すること等、一部の項目の評価は受けておりません。</p>
+                            <div class="imgBx">
+                                <img src="./assets/img/quality/s1_10.png">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 毎日の安心を支えるセキュリティ -->
+                    <div class="faciliLead">
+                        <p>毎日の安心を支えるセキュリティ</p>
+                    </div>
+                    <div class="flex_area">
+                        <div>
 
+                        </div>
+                        <div>
+                            
+                        </div>
+                    </div>
                 </div>
 
                 <!-- 2タブ目 -->
                 <div class="quaBx quaBx2">
-                    <div class="quaBxLead flex_area">
-                        <p><span>［省エネ･エコ］</span>地球に優しく、ずっと愛される住まいであるために、<br class="_sp">豊かな未来のために。</p>
-                        <p>Economy & Ecology</p>
+                    <div class="quaBxLead flex_area sp_jc">
+                        <p class="quaBxLTxt1"><span>［省エネ･エコ］</span>地球に優しく、ずっと愛される<br class="_sp">住まいであるために、豊かな未来のために。</p>
+                        <p class="quaBxLTxt2">Economy & Ecology</p>
                     </div>
+                    <!-- Low-E複層ガラス -->
                     <div class="lineHeading">
                         <p>Low-E複層ガラス</p>
                     </div>
                     <p class="fcTxt">板ガラスの間に乾燥空気を封入し、特殊金属（Low-e膜）を施した「Low-E複層ガラス」を採用。紫外線を軽減する効果もあります。</p>
+                    <div class="flex_area alstart ptb10">
+                        <div class="whalf">
+                            <p class="fcLead">●断熱効果アップ</p>
+                            <p class="fcTxt">Low-e膜の効果によって、暖房熱を室内へ反射させ、室外へ逃しにくくします。</p>
+                            <div class="ptb10 imgBx">
+                                <img src="./assets/img/quality/s2_01_pc.png" class="_pc">
+                                <img src="./assets/img/quality/s2_01_sp.png" class="_sp">
+                            </div>
+                        </div>
+                        <div class="whalf">
+                            <p class="fcLead">●紫外線カット</p>
+                            <p class="fcTxt">Low-e膜は人体に有害とされる紫外線をカットします。紫外線による家具調度品やカーペットなどの変色・退色を抑制する効果があります。</p>
+                            <div class="ptb10 imgBx">
+                                <img src="./assets/img/quality/s2_02_pc.png" class="_pc">
+                                <img src="./assets/img/quality/s2_02_sp.png" class="_sp">
+                            </div>
+                            <p class="rNotice sp_taL">（但し、変色・退色は可視光線・熱・化学物質などによって生じることがありますのでご注意ください。）</p>
+                        </div>
+                    </div>
+                    <div class="flex_area">
+                        <div class="w31">
+                            <img src="./assets/img/quality/s2_03.png">
+                        </div>
+                        <div class="w32">
+                            <div class="imgBx">
+                                <img src="./assets/img/quality/s2_04_pc.svg" class="_pc">
+                                <img src="./assets/img/quality/s2_04_sp.svg" class="_sp">
+                            </div>
+                            <p class="notice">算出条件：●気象データ／標準年拡張アメダス気象データ2010年版、2地域 岩見沢、3地域 盛岡、4地域 長野、5地域 宇都宮、6地域 東京、 7地域 宮崎●住宅モデル／自立循環型住宅への設計ガイドラインに掲載の「一般モデル」を採用。断熱仕様は、H25省エネ基準解説書(住宅版)記載の各地域の断熱材厚さに準拠。●空調条件／暖房期間は日平均気温が15℃以下、冷房期間は日平均気温が23℃以上に該当する期間。空調運転スケジュールは、2地域のみ暖房は連続運転、その他の地域の暖房は間欠運転。冷房は全地域間欠運転。暖冷房設定温度は、暖房：20℃、冷房：27℃（就寝時 寝室・居室 28℃）●その他／自然換気：0.5回/h 夏期、室温が設定温度より高く外気温が設定温度より低い時間帯に窓開放換気。内部発熱：発熱量と発熱スケジュールは住宅事業主判断基準に準拠。カーテン：冬期日中なし、その他(冬期夜間、夏期日中、夏期夜間)あり。</p>
+                        </div>
+                    </div>
+                    <!-- プリオール・エコジョーズ -->
+                    <div class="lineHeading btNone mt40 sp_mt80">
+                        <p>プリオール・エコジョーズ</p>
+                        <div class="lHImg">
+                            <img src="./assets/img/quality/s2_05.svg">
+                        </div>
+                    </div>
+                    <p class="fcTxt">キッチンやシャワーなどへの給湯はもちろん、自動風呂、床暖房、浴室暖房乾燥、ミストサウナなど1台で何役もこなす給湯器を採用しています。</p>
+                    <div class="flex_area alstart ptb10">
+                        <div class="w4 imgBx">
+                            <img src="./assets/img/quality/s2_09_pc.svg" class="_pc">
+                            <img src="./assets/img/quality/s2_09_sp.svg" class="_sp">
+                        </div>
+                        <div class="w1 imgBx">
+                            <div>
+                                <img src="./assets/img/quality/s2_10_pc.svg" class="_pc">
+                                <img src="./assets/img/quality/s2_10_sp.svg" class="_sp">
+                            </div>
+                            <p class="notice">※従来ご利用のガス機器（ふろ給湯器・ガスコンロ・ガスファンヒーター）の年間ガス使用量は、609㎥で年間のガス代は約103,000円で一般料金を適用。床暖房ご利用のガス機器（エコジョーズ・ガスコンロ・ガス温水式床暖房・ミストサウナ機能付浴乾）の年間ガス使用量は、664㎥であっためトク料金集合一括受電オプション割引9%を適用し、年間ガス代は約84,000円。※ガス料金は大阪ガスの基準単価（消費税10%、原料費調整額を含む）から、消費税率10％の料金を推定して算出。<br>
+                            出典元：大阪ガス</p>
+                        </div>
+                    </div>
+                    <!-- 高圧電力一括受電 -->
+                    <div class="lineHeading mt40">
+                        <p>高圧電力一括受電</p>
+                    </div>
+                    <p class="fcTxt">高圧一括受電を採用しており、各住戸の皆様の電気料金を削減します。</p>
+                    <div class="imgBx">
+                        <img src="./assets/img/quality/s2_11_pc.svg" alt="" class="_pc">
+                        <img src="./assets/img/quality/s2_11_sp.png" alt="" class="_sp">
+                    </div>
+                    <p class="notice">※試算条件 居住面積70〜80㎡、2〜3人家族を想定した試算例（2023年1月時点の単価）。［従来方式］（一般給湯器・ガスコンロ・ガスファンヒーター利用）。電気：関西電力 従量電灯A料金4,165kWh。［関西ビジネスインフォメーション一括受電］（エコジョーズ・ガスコンロ・ガス温水床暖房・ミストサウナ機能付浴室暖房乾燥機）。電気：関西ビジネスインフォメーション一括 従量電灯A料金7%割引+3％割引（大阪ガスとのガス契約に限定）4,165kWh。</p>
+                    <!-- 一時止水機能付シャワーヘッド・京都市建築物環境配慮性能表示・省エネルギー対策等級4 -->
+                    <div class="flex_area alstart">
+                        <div class="w31">
+                            <div class="lineHeading mt40">
+                                <p>一時止水機能付シャワーヘッド</p>
+                            </div>
+                            <p class="fcTxt">ワンストップボタンで一時止水機能を使うと50％※1の節水効果があります。</p>
+                            <div class="imgBx">
+                                <img src="./assets/img/quality/s2_13.jpg">
+                            </div>
+                            <p class="rNotice">メーカー参考写真</p>
+                            <div class="imgBx">
+                                <img src="./assets/img/quality/s2_14_pc.svg" alt="" class="_pc">
+                                <img src="./assets/img/quality/s2_14_sp.svg" alt="" class="_sp">
+                            </div>
+                            <p class="notice">※1.グローエ社従来製品と比較。※2.4人世帯での仕様の場合となります。省エネ・防犯住宅アプローチブックによる。※ボタンは一時的な止水です。完全止水は水栓本体で行ってください。</p>
+                        </div>
+                        <div class="w31">
+                            <div class="lineHeading mt40">
+                                <p>京都市建築物環境配慮性能表示</p>
+                            </div>
+                            <p class="fcTxt">「CASBEE」（建築環境総合性能評価システム）とは、建築物の環境性能を評価し格付けする手段として、国土交通省の主導の下に、産・官・学の共同により開発されたものです。</p>
+                            <div class="imgBx">
+                                <img src="./assets/img/quality/s2_15.png">
+                            </div>
+                        </div>
+                        <div class="w31">
+                            <div class="lineHeading mt40">
+                                <p>省エネルギー対策等級4</p>
+                            </div>
+                            <p class="fcTxt">住宅性能表示制度の「温熱環境・エネルギー消費量に関すること」において、「ジェイグラン京都西大路」は外壁や窓など建物外皮からの熱損失対策を評価する断熱等性能等級が「4」、また設備の省エネ性能から算出される一次エネルギー（石油・石炭・天然ガス等）消費量等級が「4」の評価を取得（予定）<span class="fs10">※1</span>。</p>
+                            <div class="imgBx">
+                                <img src="./assets/img/quality/s2_16.png">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 節水・経済性にも優れた「ビルトイン食器洗い乾燥機」 -->
+                    <div class="lineHeading mt40">
+                        <p>節水・経済性にも優れた<br class="_sp">「ビルトイン食器洗い乾燥機」</p>
+                    </div>
+                    <p class="fcTxt">静かさと省エネ性能にこだわったビルトインタイプの食器洗い乾燥機。食器の種類ごとに入れる位置が分かれている「カラーナビ食器かご」や大きな操作ボタンなどをはじめ、毎日使うものだからこその配慮も魅力です。</p>
+                    <div class="flex_area">
+                        <div class="w1 imgBx">
+                            <img src="./assets/img/quality/s2_17.jpg">
+                        </div>
+                        <div class="w4 imgBx">
+                            <img src="./assets/img/quality/s2_18_pc.svg" class="_pc">
+                            <img src="./assets/img/quality/s2_18_sp.svg" class="_sp">
+                        </div>
+                    </div>
+                    <p class="notice">※1.日本電機工業会自主基準での測定値（食器容量最大の洗浄運転時、ドア面材またはドアパネル取付時）。※2.除菌の試験内容（EW45R2シリーズ）●試験機関名：一般財団法人日本食品分析センター●試験方法：寒天平板培養法●試験成績書発行年月日：2016年12月12日●試験成績書発行番号：第 16118347001 0101号 ●除菌の方法：加熱高温水洗浄方式・温風乾燥方式 ●除菌の対象：庫内食器類 ●試験結果：99%以上の除菌効果※3.2022年4月1日現在（ビルトイン食洗機幅45cm引き出し式において）※4.【手洗い】＜食器40点、小物（はし5膳、スプーン・フォーク各5点）はしは1膳=2点とする水温約20℃＞合計60点を約10Lのお湯（約 40℃40℃）でつけ置き。食器・小物に使う洗い＆すすぎ水量は約40℃のお湯にして食器：1.35L/点、小物0.55L/点使用する。洗剤は1回あたり315ml入り164円（税込）（日本電機工業会調べ）を9.6ml使用※5.【 4〜5 人コース運転時】食器40点、小物（はし5膳、スプーン・フォーク各5点）はしは1膳=2点とする水温約60℃、4 ～５人コース（洗い～乾燥で仕上げた場合。洗剤は1箱詰替え用600ｇ入り422円（税込）（三菱電機調べ）を5ｇ使用。</p>
+                    <!-- ダブル保温でしっかり省エネ「サーモバスS」・節水型トイレ -->
+                    <div class="flex_area alstart">
+                        <div class="whalf posiR">
+                            <div class="lineHeading mt40">
+                                <p>ダブル保温でしっかり省エネ<br class="_sp">「サーモバスS」</p>
+                            </div>
+                            <p class="fcTxt s2_19Txt">保温組みフタと浴槽保温材によるダブル保温で、4時間後の温度低下は約−2.5°C。快適な温度をキープするので、節約・省エネに役立ちます。</p>
+                            <div class="imgBx">
+                                <img src="./assets/img/quality/s2_19_pc.png" class="_pc">
+                                <img src="./assets/img/quality/s2_19_sp.png" class="_sp">
+                            </div>
+                            <div class="imgBx">
+                                <img src="./assets/img/quality/s2_21.svg">
+                            </div>
+                            <p class="notice">【試算条件】サーモバスSはユニットバス周辺温度10°C±2°Cの環境下で、4時間後の温度低下が保温なし浴槽：6°C・サーモバスS；2.5°C以下（半年間は温度低下が半分）で、浴槽実用水量：187L、追いだき回数：1回/日、ふろ部燃焼効率80％の給湯器で、給湯後4時間後に追いだきした場合で算出。【引用元】LIXIL基準（159円/㎥（税込））※料金表示は、メーカーパンフレット（2019年9月）によるものです。※数値はあくまでも目安であり、記載通りの削減を保証するものではありません。</p>
+                        </div>
+                        <div class="whalf">
+                            <div class="lineHeading mt40">
+                                <p>節水型トイレ</p>
+                            </div>
+                            <p class="fcTxt">従来型トイレと比べ、洗浄水量を大幅に節水できる節水型トイレ。毎日何度も使う洗浄水だから、環境にも家計にもやさしくしています。</p>
+                            <div class="imgBx">
+                                <img src="./assets/img/quality/s2_20_pc.png" class="_pc">
+                                <img src="./assets/img/quality/s2_20_sp.png" class="_sp">
+                            </div>
+                            <div class="imgBx">
+                                <img src="./assets/img/quality/s2_22.svg">
+                            </div>
+                            <p class="notice">試算条件（2021年12月現在）使用状態の設定（4人家族を想定）年間使用日数：365日4人家族（男性2人、女性2人）大1回／人・日、小3回／人・日※「省エネ・防犯住宅推進アプローチブック」より水道代＝265（税込）円／㎥※（一社）日本バルブ工業会より※料金単価は消費税10%での値です。</p>
+                        </div>
+                    </div>
+                    <p class="rNotice sp_taL">※掲載の写真はモデルルーム（C-Aタイプ／B-Gタイプ）にて撮影（2023年1月）したものに一部CG処理を施しております。また、家具・調度品類やオプション仕様等は販売価格に含まれません。</p>
                 </div>
 
                 <!-- 3タブ目 -->
                 <div class="quaBx quaBx3">
-                    <div class="quaBxLead flex_area">
-                        <p><span>［快適・便利］</span>暮らし心地を高める</p>
-                        <p>Comfort & Convenience</p>
+                    <div class="quaBxLead flex_area sp_jc">
+                        <p class="quaBxLTxt1"><span>［快適・便利］</span>暮らし心地を高める</p>
+                        <p class="quaBxLTxt2">Comfort & Convenience</p>
                     </div>
                     <div class="faciliLead">
                         <p>KITCHEN</p>

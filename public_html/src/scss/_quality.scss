@@ -8,6 +8,9 @@
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
+        &.ptb10{
+            padding: 10px 0;
+        }
         /* 5分割 */
         .w1{
             // width: calc(99%/5);
@@ -27,10 +30,58 @@
         .whalf{
             width: calc(96%/2);
         }
+        .w32{
+            width: calc(96%/3*2);
+        }
+        .w31{
+            width: calc(96%/3*1);
+        }
+        .posiR{
+            position: relative;
+            .s2_19Txt{
+                position: absolute;
+                width: 35%;
+                left: 0;
+                top: 100px;
+            }
+        }
     }
 
     .alstart{
         align-items: flex-start;
+    }
+
+    .fcLead{
+        font-size: clamp(14px, 1.5vw, 18px);
+        color: #877437;
+        margin: 10px 0;
+        .fs10{
+            font-size: 10px;
+        }
+    }
+
+    .imgBx{
+        margin: 10px 0;
+    }
+
+    .fcTxt{
+        font-size: 14px;
+        line-height: 1.5;
+        .fs10{
+            font-size: 10px;
+        }
+    }
+
+    .notice{
+        margin: 10px 0;
+        font-size: 10px;
+        line-height: 1.5;
+    }
+
+    .rNotice{
+        font-size: 10px;
+        text-align: right;
+        margin: 10px 0;
     }
 
     // .alsb{
@@ -67,11 +118,13 @@
             }
             .quaBxInner{
                 width: 100%;
-                margin: 80px auto;
+                margin: 80px auto 0;
                 .quaBx{
-                    opacity: 0;
+                    // opacity: 0;
+                    display: none;
                     &.show{
-                        opacity: 1;
+                        // opacity: 1;
+                        display: block;
                     }
 
                     /* 省エネ・エコ */
@@ -80,9 +133,21 @@
                         border-bottom: 1px solid #7d7d7d;
                         padding: 10px 0 5px;
                         margin: 20px 0;
+                        position: relative;
+                        &.btNone{
+                            border-top: none;
+                        }
+                        &.mt40{
+                            margin-top: 40px;
+                        }
                         p{
                             color: #877437;
                             font-size: clamp(14px,2.5vw,20px);
+                        }
+                        .lHImg{
+                            position: absolute;
+                            right: 0;
+                            top: -15px;
                         }
                     }
 
@@ -93,7 +158,15 @@
                         background-color: #656464;
                         padding: 15px 20px;
                         margin: 20px auto;
-                        p{
+                        // p{
+                        //     span{
+                        //         font-size: clamp(14px,3.5vw,20px);
+                        //     }
+                        // }
+                        .quaBxLTxt1,.quaBxLTxt2{
+                            text-align: center;
+                            font-size: clamp(12px,1.5vw,16px);
+                            line-height: 1.5;
                             span{
                                 font-size: clamp(14px,3.5vw,20px);
                             }
@@ -103,7 +176,7 @@
                         width: 100%;
                         color: #fff;
                         background-color: #877437;
-                        padding: 15px 20px;
+                        padding: 15px 20px 10px;
                         margin: 20px auto 10px;
                         &.p15{
                             padding: 15px 10px;
@@ -131,30 +204,30 @@
                     }
                     .faciliCard{
                         width: calc(96%/5);
-                        .fcLead{
-                            font-size: clamp(14px, 1.5vw, 18px);
-                            color: #877437;
-                            margin: 10px 0;
-                            .fs10{
-                                font-size: 10px;
-                            }
-                        }
-                        .fcTxt{
-                            font-size: 14px;
-                            line-height: 1.25;
-                            .fs10{
-                                font-size: 10px;
-                            }
-                        }
-                        .notice{
-                            font-size: 10px;
-                            margin: 10px 0;
-                            line-height: 1.5;
-                        }
-                        .rNotice{
-                            font-size: 10px;
-                            text-align: right;
-                        }
+                        // .fcLead{
+                        //     font-size: clamp(14px, 1.5vw, 18px);
+                        //     color: #877437;
+                        //     margin: 10px 0;
+                        //     .fs10{
+                        //         font-size: 10px;
+                        //     }
+                        // }
+                        // .fcTxt{
+                        //     font-size: 14px;
+                        //     line-height: 1.25;
+                        //     .fs10{
+                        //         font-size: 10px;
+                        //     }
+                        // }
+                        // .notice{
+                        //     font-size: 10px;
+                        //     margin: 10px 0;
+                        //     line-height: 1.5;
+                        // }
+                        // .rNotice{
+                        //     font-size: 10px;
+                        //     text-align: right;
+                        // }
                         // &.w52{
                         //     width: calc(96%/5*2);
                         // }
@@ -182,11 +255,11 @@
                             margin: 10px auto;
                         }
                     }
-                    .notice{
-                        margin: 10px 0;
-                        font-size: 10px;
-                        line-height: 1.5;
-                    }
+                    // .notice{
+                    //     margin: 10px 0;
+                    //     font-size: 10px;
+                    //     line-height: 1.5;
+                    // }
                     /* 快適・便利ここまで */
                 }
 
@@ -205,22 +278,72 @@
         }
 
         .flex_area{
-            .w2{
+            // .w2{
+            //     width: 100%;
+            // }
+            // .w3{
+            //     width: 100%;
+            // }
+            // .w31{
+            //     width: 100%;
+            // }
+            .w1,.w2,.w3,.w4,.whalf,.w31,.w32{
                 width: 100%;
             }
-            .w3{
-                width: 100%;
-            }
-
             ._spmt10{
                 margin-top: 10px;
             }
+            .posiR{
+                .s2_19Txt{
+                    position: static;
+                    width: 100%;
+                }
+            }
+        }
+
+        .sp_jc{
+            justify-content: center;
+        }
+
+        .sp_taL{
+            text-align: left;
         }
 
         .qualityCon{
+            padding: 40px 0;
             .tabArea{
                 .quaBxInner{
+                    margin: 40px 0 0;
                     .quaBx{
+                        .lineHeading{
+                            &.sp_mt80{
+                                margin-top: 80px;
+                            }
+                            p{
+                                font-size: clamp(20px,5vw,32px);
+                                line-height: 1.5;
+                            }
+                            .lHImg{
+                                right: auto;
+                                top: -40px;
+                                width: 45%;
+                                min-width: 230px;
+                            }
+                        }
+                        .quaBxLead{
+                            .quaBxLTxt1,.quaBxLTxt2{
+                                font-size: clamp(14px,3.5vw,30px);
+                                span{
+                                    font-size: clamp(14px,3.5vw,30px);
+                                }
+                            }
+                            .quaBxLTxt1{
+                                order: 2;
+                            }
+                            .quaBxLTxt2{
+                                order: 1;
+                            }
+                        }
                         .faciliCard{
                             width: calc(96%/2);
                             &.w2{
